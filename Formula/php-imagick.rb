@@ -6,7 +6,7 @@ class PhpImagick < Formula
   depends_on "autoconf" => :build
   depends_on "php"
   depends_on "pkg-config" => :build
-  depends_on "imagemagick" =>
+  depends_on "imagemagick"
 
   def module_path
     extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
