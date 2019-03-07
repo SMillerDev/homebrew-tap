@@ -1,8 +1,8 @@
 class PhpUopz < Formula
   desc "UOPZ Extension for PHP"
   homepage "https://pecl.php.net/uopz"
-  url "https://pecl.php.net/get/uopz-6.0.0.tgz"
-  sha256 "ab0075420d08dcf5865bb95fe94a5d7a592f47147ece51901a2324774fad6982"
+  url "https://pecl.php.net/get/uopz-6.0.1.tgz"
+  sha256 "d4b4ef39559f2083a61c1cdf69fb352b3b9da04d94a64aa48197ecca4a780afb"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
