@@ -1,8 +1,8 @@
 class Phpstan < Formula
   desc "Programmer-oriented testing framework for PHP"
   homepage "https://phpstan.org/"
-  url "https://github.com/phpstan/phpstan/releases/download/0.11.4/phpstan.phar"
-  sha256 "4346a3b509bddd5ce7b2dc741b1f55b813e47726d12acf9bb4936a11790d39b4"
+  url "https://github.com/phpstan/phpstan/releases/download/0.11.5/phpstan.phar"
+  sha256 "49b0ccea56a27cd379747a5f5a24b75e8c8f382fd593188c075bb5921da5538d"
 
   bottle :unneeded
 
