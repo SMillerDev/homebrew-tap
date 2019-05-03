@@ -1,12 +1,13 @@
 class PhpImagick < Formula
   desc "Imagick Extension for PHP"
-  url "https://pecl.php.net/get/imagick-3.4.3.tgz"
-  sha256 "1f3c5b5eeaa02800ad22f506cd100e8889a66b2ec937e192eaaa30d74562567c"
+  homepage "https://pecl.php.net/imagick"
+  url "https://pecl.php.net/get/imagick-3.4.4.tgz"
+  sha256 "8dd5aa16465c218651fc8993e1faecd982e6a597870fd4b937e9ece02d567077"
 
   depends_on "autoconf" => :build
-  depends_on "php"
   depends_on "pkg-config" => :build
   depends_on "imagemagick"
+  depends_on "php"
 
   def module_path
     extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
