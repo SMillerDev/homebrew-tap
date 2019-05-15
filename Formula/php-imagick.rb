@@ -27,7 +27,7 @@ class PhpImagick < Formula
     (lib/module_path).install "modules/imagick.so"
   end
 
-    def post_install
+  def post_install
     ext_config_path = etc/"php"/Formula["php"].php_version/"conf.d"/"ext-imagick.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
