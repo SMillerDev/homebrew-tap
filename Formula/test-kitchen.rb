@@ -1,8 +1,8 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/v2.2.2.tar.gz"
-  sha256 "47843523315a69061ef2b08ed142b93ede31f7a7ddb766b0fcd91fd6162789a8"
+  url "https://github.com/test-kitchen/test-kitchen/archive/v2.2.5.tar.gz"
+  sha256 "65144174f654a085726b9ec13c760dafc0ff363218143e55997d2ba3bfa72748"
 
   depends_on "ruby" if MacOS.version <= :sierra
 
