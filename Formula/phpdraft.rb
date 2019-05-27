@@ -6,8 +6,8 @@ class Phpdraft < Formula
 
   bottle :unneeded
 
-  depends_on "drafter"
   depends_on "php" => :test
+  depends_on "drafter"
 
   def install
     bin.install "phpdraft-#{version}.phar" => "phpdraft"
