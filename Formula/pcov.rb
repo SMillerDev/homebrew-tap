@@ -1,8 +1,8 @@
 class Pcov < Formula
   desc "CodeCoverage compatible driver for PHP7"
   homepage "https://github.com/krakjoe/pcov"
-  url "https://github.com/krakjoe/pcov/archive/v1.0.5.tar.gz"
-  sha256 "119cc1ece22560e31950005fd0c7fefc1d04f149fd77edcabd773ba78f7c5034"
+  url "https://github.com/krakjoe/pcov/archive/v1.0.6.tar.gz"
+  sha256 "3be3b8af91c43db70c4893dd2552c9ee2877e9cf32f59a607846c9ceb64a173b"
 
   depends_on "php"
 
