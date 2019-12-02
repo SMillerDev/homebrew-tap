@@ -1,8 +1,8 @@
 class PhpRaphf < Formula
   desc "Raphf Extension for PHP"
   homepage "https://pecl.php.net/raphf"
-  url "https://pecl.php.net/get/raphf-2.0.0.tgz"
-  sha256 "95a59ea0dc3fc172805a6acd8327b122dd159b0a85b253826166457a05efa411"
+  url "https://pecl.php.net/get/raphf-2.0.1.tgz"
+  sha256 "da3566db17422e5ef08b7ff144162952aabc14cb22407cc6b1d2a2d095812bd0"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
