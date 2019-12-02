@@ -1,8 +1,8 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://pecl.php.net/pecl_http"
-  url "https://pecl.php.net/get/pecl_http-3.2.0.tgz"
-  sha256 "6fb7f038365fb1f3302f1b7e7d6b55d5c422bdea36057b1efe02bbe6ad3cc01b"
+  url "https://pecl.php.net/get/pecl_http-3.2.3.tgz"
+  sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
