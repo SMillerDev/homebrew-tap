@@ -2,9 +2,9 @@ name: Audit
 on: [pull_request]
 
 jobs:
-  audit:
+  build:
     runs-on: ubuntu-latest
-    container: linuxbrew/linuxbrew
+    container: linuxbrew/brew
     steps:
     - name: Changed Files Exporter
       uses: futuratrepadeira/changed-files@v3.0.0

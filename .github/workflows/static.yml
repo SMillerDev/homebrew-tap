@@ -2,9 +2,9 @@ name: Audit
 on: [pull_request]
 
 jobs:
-  audit:
+  static:
     runs-on: ubuntu-latest
-    container: linuxbrew/linuxbrew
+    container: linuxbrew/brew
     steps:
     - name: Changed Files Exporter
       uses: futuratrepadeira/changed-files@v3.0.0
@@ -12,3 +12,5 @@ jobs:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
     - name: Brew style
       run: "brew style ${{ steps.files.outputs.files_updated }} ${{ steps.files.outputs.files_created }}"
+    - name: Brew audit
+      run: "brew audit ${{ steps.files.outputs.files_updated }} ${{ steps.files.outputs.files_created }}"
