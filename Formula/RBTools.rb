@@ -5,6 +5,7 @@ class Rbtools < Formula
   homepage "https://www.reviewboard.org/downloads/rbtools/"
   url "https://files.pythonhosted.org/packages/ba/bd/d64689523c7196ac2d7a8ac68099dc5eeadfae34d5e52f9773fe88950af8/RBTools-1.0.2.tar.gz"
   sha256 "577c2f8bbf88f77bda84ee95af0310b59111c156f48a5aab56ca481e2f77eaf4"
+  head "https://github.com/reviewboard/rbtools.git"
 
   depends_on "python"
 

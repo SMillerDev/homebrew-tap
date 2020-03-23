@@ -3,6 +3,7 @@ class Pcov < Formula
   homepage "https://github.com/krakjoe/pcov"
   url "https://github.com/krakjoe/pcov/archive/v1.0.6.tar.gz"
   sha256 "3be3b8af91c43db70c4893dd2552c9ee2877e9cf32f59a607846c9ceb64a173b"
+  head "https://github.com/krakjoe/pcov.git"
 
   depends_on "php"
 

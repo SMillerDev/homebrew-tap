@@ -3,6 +3,7 @@ class PhpXdebug < Formula
   homepage "https://pecl.php.net/xdebug"
   url "http://xdebug.org/files/xdebug-2.9.2.tgz"
   sha256 "158cce5ff44411128701227ada80933cbd4b03c241a3d0695a309098b3eecc69"
+  head "https://github.com/xdebug/xdebug.git"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build

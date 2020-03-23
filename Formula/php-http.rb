@@ -3,6 +3,7 @@ class PhpHttp < Formula
   homepage "https://pecl.php.net/pecl_http"
   url "https://pecl.php.net/get/pecl_http-3.2.3.tgz"
   sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
+  head "https://github.com/m6w6/ext-http.git"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build

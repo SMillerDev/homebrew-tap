@@ -3,6 +3,7 @@ class PhpUopz < Formula
   homepage "https://pecl.php.net/uopz"
   url "https://pecl.php.net/get/uopz-6.1.1.tgz"
   sha256 "29e8f50a4a6486ea6e9ba5bea706d1e75153e4d7052407ae27ca74c457b953e6"
+  head "https://github.com/krakjoe/uopz.git"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build

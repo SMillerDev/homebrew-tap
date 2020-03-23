@@ -3,6 +3,7 @@ class Phing < Formula
   homepage "https://www.phing.info"
   url "https://www.phing.info/get/phing-2.16.1.phar"
   sha256 "dcc7b63e1a1f8e1599b0fb33a02b053ee9adcdd2885538e36d7e1f5c81062040"
+  head "https://github.com/phingofficial/phing.git"
 
   bottle :unneeded
 

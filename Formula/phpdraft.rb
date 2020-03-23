@@ -3,6 +3,7 @@ class Phpdraft < Formula
   homepage "https://github.com/SMillerDev/phpdraft"
   url "https://github.com/SMillerDev/phpdraft/releases/download/1.15.10/phpdraft-1.15.10.phar"
   sha256 "1535dba4cce8645af191bbc120dfc78e0742a1227dc9344b04aca42e3a4ac5ec"
+  head "https://github.com/SMillerDev/phpdraft.git"
 
   bottle :unneeded
 

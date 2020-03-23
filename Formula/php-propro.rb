@@ -3,6 +3,7 @@ class PhpPropro < Formula
   homepage "https://pecl.php.net/propro"
   url "https://pecl.php.net/get/propro-2.1.0.tgz"
   sha256 "7bba0653d90cd8f61816e13ac6c0f7102b4a16dc4c4e966095a121eeb4ae8271"
+  head "https://github.com/m6w6/ext-propro.git"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build

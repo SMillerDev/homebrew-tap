@@ -3,6 +3,7 @@ class PhpUuid < Formula
   homepage "https://pecl.php.net/uuid"
   url "https://pecl.php.net/get/uuid-1.0.4.tgz"
   sha256 "63079b6a62a9d43691ecbcd4eb52e5e5fe17b5a3d0f8e46e3c17ff265c06a11f"
+  head "https://github.com/php/pecl-networking-uuid.git"
 
   depends_on "autoconf" => :build
   depends_on "ossp-uuid"
