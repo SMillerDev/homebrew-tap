@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup tap
         run: |
+          brew tap $(brew --repository ${{github.repository}})
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
       - name: Build bottles
