@@ -1,8 +1,8 @@
 class PhpUuid < Formula
   desc "UUID Extension for PHP"
   homepage "https://pecl.php.net/uuid"
-  url "https://pecl.php.net/get/uuid-1.1.0.tgz"
-  sha256 "981c1c2fec77aaffec29242c29a346bc6ec2115053e9b6b5afb4a4e149a2333f"
+  url "https://pecl.php.net/get/uuid-1.0.4.tgz"
+  sha256 "63079b6a62a9d43691ecbcd4eb52e5e5fe17b5a3d0f8e46e3c17ff265c06a11f"
   head "https://github.com/php/pecl-networking-uuid.git"
 
   depends_on "autoconf" => :build
