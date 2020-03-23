@@ -32,7 +32,7 @@ jobs:
         run: |
           cp -a ~/bottles $GITHUB_WORKSPACE
       - name: Upload bottles
-        if: always()
+        if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-artifact@v1
         with:
           name: bottles
