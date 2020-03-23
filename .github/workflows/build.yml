@@ -1,14 +1,36 @@
-name: Audit
-on: [pull_request]
+name: Build bottles.
+
+on:
+  pull_request:
+    paths:
+      - 'Formula/*'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    container: linuxbrew/brew
+  build-bottles:
+    runs-on: [ubuntu-latest, macos-latest]
+    container:
+      image: homebrew/brew
     steps:
-    - name: Changed Files Exporter
-      uses: futuratrepadeira/changed-files@v3.0.0
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-    - name: Brew build
-      run: "brew install ${{ steps.files.outputs.files_updated }} ${{ steps.files.outputs.files_created }}"
+      - name: Checkout tap
+        uses: actions/checkout@v2
+      - name: Setup tap
+        run: |
+          rm -rf $(brew --repository ${{github.repository}})
+          ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
+      - name: Build bottles
+        run: |
+          mkdir ~/bottles
+          cd ~/bottles
+          brew test-bot \
+            --tap=smillerdev/php-ext \
+            --keep-old
+      - name: Copy bottles
+        if: always()
+        run: |
+          cp -a ~/bottles $GITHUB_WORKSPACE
+      - name: Upload bottles
+        if: always()
+        uses: actions/upload-artifact@v1
+        with:
+          name: bottles
+          path: bottles
