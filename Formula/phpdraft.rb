@@ -1,8 +1,8 @@
 class Phpdraft < Formula
   desc "Parser for API Blueprint files in PHP"
   homepage "https://github.com/SMillerDev/phpdraft"
-  url "https://github.com/SMillerDev/phpdraft/releases/download/2.1/phpdraft-2.1.phar"
-  sha256 "9a46dc16b0a6c970e13bd80c24671c9125ff33ff63da8e2b5af3f58ac7345600"
+  url "https://github.com/SMillerDev/phpdraft/releases/download/2.1.1/phpdraft-2.1.1.phar"
+  sha256 "117b27d67995a4c381ef8c92fb3cf0e1e4ef4979c5e7550d7fa95c197fe26f4d"
   head "https://github.com/SMillerDev/phpdraft.git"
 
   bottle :unneeded
@@ -25,6 +25,6 @@ class Phpdraft < Formula
       [App.net API](http://developers.app.net).
 
     EOS
-    assert_match /<title>Real World API<\/title>/, shell_output("#{bin}/phpdraft --file index.apib")
+    assert_match "<title>Real World API<\/title>", shell_output("#{bin}/phpdraft --file index.apib")
   end
 end
