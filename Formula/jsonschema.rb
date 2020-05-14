@@ -2,21 +2,17 @@ class Jsonschema < Formula
   include Language::Python::Virtualenv
 
   desc "Implementation of JSON Schema for Python"
-  homepage "https://github.com/M2mobi/jsonschema"
-  url "https://github.com/M2Mobi/jsonschema/archive/master.tar.gz"
+  homepage "https://github.com/Julian/jsonschema"
+    url "https://github.com/Julian/jsonschema.git",
+      :revision => "5e0fea13189bf118eadc8c812eed08f0751b8394"
   version "3.2.99"
-  sha256 "394c6b7e4919f3de53a4714ab9660258a2bc845ba102ae4f3f64e767ee824e09"
+  head "https://github.com/Julian/jsonschema.git"
 
-  depends_on "python"
+  depends_on "python@3.8"
 
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz"
     sha256 "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
-  end
-
-  resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/8c/0e/10e247f40c89ba72b7f2a2104ccf1b65de18f79562ffe11bfb837b711acf/importlib_metadata-1.4.0.tar.gz"
-    sha256 "f17c015735e1a88296994c0697ecea7e11db24290941983b08c9feb30921e6d8"
   end
 
   resource "more-itertools" do
@@ -44,6 +40,23 @@ class Jsonschema < Formula
   end
 
   test do
-    assert_match "#{version.to_s}", "#{bin}/jsonschema --version"
+  	(testpath/"test.json").write <<~EOS
+      {
+      	"name" : "Eggs",
+      	"price" : 34.99
+      }
+    EOS
+
+  	(testpath/"test.schema").write <<~EOS
+      {
+        "type": "object",
+        "properties": {
+            "price": {"type": "number"},
+            "name": {"type": "string"}
+        }
+      }
+    EOS
+
+    assert_match "SUCCESS", shell_output("#{bin}/jsonschema --output pretty --instance #{testpath}/test.json #{testpath}/test.schema")
   end
 end
