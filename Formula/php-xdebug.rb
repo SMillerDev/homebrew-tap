@@ -1,8 +1,8 @@
 class PhpXdebug < Formula
   desc "XDebug Extension for PHP"
   homepage "https://pecl.php.net/xdebug"
-  url "http://xdebug.org/files/xdebug-2.9.2.tgz"
-  sha256 "158cce5ff44411128701227ada80933cbd4b03c241a3d0695a309098b3eecc69"
+  url "http://xdebug.org/files/xdebug-2.9.6.tgz"
+  sha256 "ab03b6014706491b393aa8d520b5bdaf6735a2f1bc12a7772b2916ef2646e454"
   head "https://github.com/xdebug/xdebug.git"
 
   depends_on "autoconf" => :build
@@ -10,7 +10,7 @@ class PhpXdebug < Formula
   depends_on "php"
 
   def module_path
-    extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
