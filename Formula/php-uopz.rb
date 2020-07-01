@@ -1,8 +1,8 @@
 class PhpUopz < Formula
   desc "UOPZ Extension for PHP"
   homepage "https://pecl.php.net/uopz"
-  url "https://pecl.php.net/get/uopz-6.1.1.tgz"
-  sha256 "29e8f50a4a6486ea6e9ba5bea706d1e75153e4d7052407ae27ca74c457b953e6"
+  url "https://pecl.php.net/get/uopz-6.1.2.tgz"
+  sha256 "d84b8a2ed89afc174be2dd2771410029deaf5796a2473162f94681885a4d39a8"
   head "https://github.com/krakjoe/uopz.git"
 
   depends_on "autoconf" => :build
@@ -10,7 +10,7 @@ class PhpUopz < Formula
   depends_on "php"
 
   def module_path
-    extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
