@@ -1,8 +1,8 @@
 class Phpdraft < Formula
   desc "Parser for API Blueprint files in PHP"
   homepage "https://github.com/SMillerDev/phpdraft"
-  url "https://github.com/SMillerDev/phpdraft/releases/download/2.2.1/phpdraft-2.2.1.phar"
-  sha256 "4b3a1f313b9fceeb4d04eb2a44ce752c3915245677012844a0c3aa954035b70f"
+  url "https://github.com/SMillerDev/phpdraft/releases/download/2.3.0/phpdraft-2.3.0.phar"
+  sha256 "9802a96b96a0cfaae86e6e370fc68a18b062341b094981baf967b3690af6d2bf"
   head "https://github.com/SMillerDev/phpdraft.git"
 
   bottle :unneeded
