@@ -19,8 +19,8 @@ class TestKitchen < Formula
     system "gem", "install", "kitchen-salt", "--norc", "--no-document"
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
 
-    bin.env_script_all_files(libexec/"bin", GEM_HOME => ENV["GEM_HOME"])
-    (bin/"kitchen").write_env_script(libexec/"bin/kitchen", GEM_PATH => libexec)
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
+    (bin/"kitchen").write_env_script(libexec/"bin/kitchen", GEM_PATH: libexec)
   end
 
   test do
