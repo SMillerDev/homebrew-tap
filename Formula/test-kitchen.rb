@@ -4,8 +4,9 @@ class TestKitchen < Formula
   url "https://github.com/test-kitchen/test-kitchen/archive/v2.6.0.tar.gz"
   sha256 "2ddc0bc613c4a85ee9b05ed73335fd47148ce747b171c8f1acfc2fd4d4c6382c"
   head "https://github.com/test-kitchen/test-kitchen.git"
+  revision 1
 
-  depends_on "ruby" if MacOS.version <= :sierra
+  uses_from_macos "ruby", since: :sierra
 
   def install
     ENV["GEM_HOME"] = libexec
@@ -18,6 +19,7 @@ class TestKitchen < Formula
     system "gem", "install", "kitchen-inspec", "--norc", "--no-document"
     system "gem", "install", "kitchen-salt", "--norc", "--no-document"
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
+    system "gem", "install", "kitchen-docker", "--norc", "--no-document"
 
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     (bin/"kitchen").write_env_script(libexec/"bin/kitchen", GEM_PATH: libexec)
