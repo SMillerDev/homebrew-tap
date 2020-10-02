@@ -1,8 +1,8 @@
 class PhpXdebug < Formula
   desc "XDebug Extension for PHP"
   homepage "https://pecl.php.net/xdebug"
-  url "http://xdebug.org/files/xdebug-2.9.6.tgz"
-  sha256 "ab03b6014706491b393aa8d520b5bdaf6735a2f1bc12a7772b2916ef2646e454"
+  url "http://xdebug.org/files/xdebug-2.9.8.tgz"
+  sha256 "f555b6cc58d96c9965af942d22e0f1818b7a477a410c76b1ab0eebe85a762f8a"
   head "https://github.com/xdebug/xdebug.git"
 
   depends_on "autoconf" => :build
