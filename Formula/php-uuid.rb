@@ -1,19 +1,20 @@
 class PhpUuid < Formula
   desc "UUID Extension for PHP"
   homepage "https://pecl.php.net/uuid"
-  url "https://pecl.php.net/get/uuid-1.0.4.tgz"
-  sha256 "63079b6a62a9d43691ecbcd4eb52e5e5fe17b5a3d0f8e46e3c17ff265c06a11f"
+  url "https://pecl.php.net/get/uuid-1.2.0.tgz"
+  sha256 "5cb834d32fa7d270494aa47fd96e062ef819df59d247788562695fd1f4e470a4"
   head "https://github.com/php/pecl-networking-uuid.git"
 
   depends_on "autoconf" => :build
   depends_on "ossp-uuid"
   depends_on "php"
 
-  patch do
+
+  resource "patch" do
     # let's fix the path to uuid.h (uuid/uuid.h on linux, ossp/uuid.h on OSX)
     # uuid_mac & uuid_time might not be available on OSX, let's add test to avoid compiling issue on these functions
-    url "https://gist.githubusercontent.com/romainneutron/fe068c297413aee565d5/raw/28d6ba0b6e902e82e71bb9a1ed768c836a8161e4/php-uuid-1.0.4"
-    sha256 "5f0664d5c4f55d4f6c037dab9f198e697afa3f9266854ed3945d7697fdb692b2"
+    url "https://github.com/SMillerDev/pecl-networking-uuid/commit/90a448026454af4e3b76fa514dca583a1d31d7e5.patch?full_index=1"
+    sha256 "c590c2045cf9837e9c97f1bfd078b615cf32d4d4c2995a793bc3691b9a0c29ee"
   end
 
   def module_path
@@ -23,7 +24,13 @@ class PhpUuid < Formula
   end
 
   def install
-    cd "uuid-#{version}"
+	cd "uuid-#{version}"
+
+    resource("patch").stage(buildpath/"uuid-#{version}")
+    patch = Dir["*.patch"].first
+    system "patch -g 0 -f -p1 < #{patch}"
+    rm patch
+
     system Formula["php"].bin/"phpize"
     configure_args = %W[
       --with-php-config=#{Formula["php"].opt_bin/"php-config"}
@@ -35,7 +42,7 @@ class PhpUuid < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].php_version/"conf.d"/"ext-uuid.ini"
+    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-uuid.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/uuid.so\""
