@@ -27,7 +27,7 @@ class PhpXdebug < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].php_version/"conf.d"/"ext-xdebug.ini"
+    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-xdebug.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /zend_extension=.*$/, "zend_extension=\"#{opt_lib/module_path}/xdebug.so\""
