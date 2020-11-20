@@ -6,14 +6,14 @@ class PhpAT80 < Formula
   sha256 "c651a10058840abd44f99a8aed0446f102291d1408f2299790b919634689b5cd"
   license "PHP-3.01"
 
-  keg_only :versioned_formula
-
   head do
     url "https://github.com/php/php-src.git"
 
     depends_on "bison" => :build # bison >= 3.0.0 required to generate parsers
     depends_on "re2c" => :build # required to generate PHP lexers
   end
+
+  keg_only :versioned_formula
 
   depends_on "httpd" => [:build, :test]
   depends_on "pkg-config" => :build
