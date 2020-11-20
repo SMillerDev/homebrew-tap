@@ -7,9 +7,9 @@ class PhpunitAT92 < Formula
 
   bottle :unneeded
 
-  depends_on "php" => :test
+  keg_only :versioned_formula
 
-  conflicts_with "phpunit"
+  depends_on "php" => :test
 
   def install
     bin.install "phpunit-#{version}.phar" => "phpunit"
