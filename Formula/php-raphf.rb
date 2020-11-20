@@ -10,7 +10,7 @@ class PhpRaphf < Formula
   depends_on "php"
 
   def module_path
-    extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
