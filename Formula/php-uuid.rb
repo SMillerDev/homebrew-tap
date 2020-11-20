@@ -9,7 +9,6 @@ class PhpUuid < Formula
   depends_on "ossp-uuid"
   depends_on "php"
 
-
   patch do
     # let's fix the path to uuid.h (uuid/uuid.h on linux, ossp/uuid.h on OSX)
     # uuid_mac & uuid_time might not be available on OSX, let's add test to avoid compiling issue on these functions
@@ -19,13 +18,13 @@ class PhpUuid < Formula
   end
 
   def module_path
-    extension_dir = Utils.popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
 
   def install
-	chdir "uuid-#{version}" do
+    chdir "uuid-#{version}" do
       system Formula["php"].bin/"phpize"
       configure_args = %W[
         --with-php-config=#{Formula["php"].opt_bin/"php-config"}
