@@ -3,8 +3,8 @@ class Jsonschema < Formula
 
   desc "Implementation of JSON Schema for Python"
   homepage "https://github.com/Julian/jsonschema"
-    url "https://github.com/Julian/jsonschema.git",
-      :revision => "5e0fea13189bf118eadc8c812eed08f0751b8394"
+  url "https://github.com/Julian/jsonschema.git",
+    revision: "5e0fea13189bf118eadc8c812eed08f0751b8394"
   version "3.2.99"
   head "https://github.com/Julian/jsonschema.git"
 
@@ -40,14 +40,14 @@ class Jsonschema < Formula
   end
 
   test do
-  	(testpath/"test.json").write <<~EOS
+    (testpath/"test.json").write <<~EOS
       {
       	"name" : "Eggs",
       	"price" : 34.99
       }
     EOS
 
-  	(testpath/"test.schema").write <<~EOS
+    (testpath/"test.schema").write <<~EOS
       {
         "type": "object",
         "properties": {
@@ -57,6 +57,7 @@ class Jsonschema < Formula
       }
     EOS
 
-    assert_match "SUCCESS", shell_output("#{bin}/jsonschema --output pretty --instance #{testpath}/test.json #{testpath}/test.schema")
+    out = shell_output("#{bin}/jsonschema --output pretty --instance #{testpath}/test.json #{testpath}/test.schema")
+    assert_match "SUCCESS", out
   end
 end
