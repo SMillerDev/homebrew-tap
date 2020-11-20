@@ -15,6 +15,10 @@ class SaltPepper < Formula
   end
 
   test do
-    assert_match "Connection refused", shell_output("#{bin}/pepper --saltapi-url=https://localhost:8000 --username='test' --password='fail' '*' test.ping 2>&1", 1)
+    out = shell_output("#{bin}/pepper
+      --saltapi-url=https://localhost:8000
+      --username='test'
+      --password='f' '*' test.ping 2>&1", 1)
+    assert_match "Connection refused", out
   end
 end
