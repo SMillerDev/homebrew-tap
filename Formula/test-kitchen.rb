@@ -1,10 +1,11 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/v2.7.2.tar.gz"
-  sha256 "532c9083b47bd87d2ddb2310a1e6af09857d611ee35d682e406c97232aa56257"
+  url "https://github.com/test-kitchen/test-kitchen/archive/v2.8.0.tar.gz"
+  sha256 "6cf34033aae76c519fedaba0996fb7a3d36f74c97a7f131e725b9986c74fca8a"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
+  uses_from_macos "libffi"
   uses_from_macos "ruby", since: :sierra
 
   def install
