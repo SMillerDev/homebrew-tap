@@ -16,7 +16,7 @@ class PhpUopz < Formula
   end
 
   def install
-    cd "uopz-#{version}"
+    cd "uopz-#{version}" unless build.head?
     system Formula["php"].bin/"phpize"
     configure_args = %W[
       --with-php-config=#{Formula["php"].opt_bin/"php-config"}
