@@ -1,11 +1,12 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/v2.7.2.tar.gz"
-  sha256 "532c9083b47bd87d2ddb2310a1e6af09857d611ee35d682e406c97232aa56257"
+  url "https://github.com/test-kitchen/test-kitchen/archive/v2.10.0.tar.gz"
+  sha256 "781fbc615a9614cc07033bd9454c328e47e48375602b6d6eabe31d0e5912e4ff"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
-  uses_from_macos "ruby", since: :sierra
+  uses_from_macos "libffi"
+  uses_from_macos "ruby@2.7"
 
   def install
     ENV["GEM_HOME"] = libexec
@@ -19,6 +20,8 @@ class TestKitchen < Formula
     system "gem", "install", "kitchen-salt", "--norc", "--no-document"
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
     system "gem", "install", "kitchen-docker", "--norc", "--no-document"
+
+    rm_r "libexec/extensions/x86_64-darwin-19/2.7.0/ffi-1.14.2/mkmf.log"
 
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     (bin/"kitchen").write_env_script(libexec/"bin/kitchen", GEM_PATH: libexec)
