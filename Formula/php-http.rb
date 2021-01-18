@@ -8,7 +8,6 @@ class PhpHttp < Formula
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php"
-  depends_on "php-propro"
   depends_on "php-raphf"
 
   def module_path
