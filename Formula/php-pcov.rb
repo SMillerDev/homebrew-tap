@@ -1,4 +1,4 @@
-class Pcov < Formula
+class PhpPcov < Formula
   desc "CodeCoverage compatible driver for PHP7"
   homepage "https://github.com/krakjoe/pcov"
   url "https://github.com/krakjoe/pcov/archive/v1.0.6.tar.gz"
@@ -25,7 +25,7 @@ class Pcov < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].php_version/"conf.d"/"ext-pcov.ini"
+    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-pcov.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/pcov.so\""
