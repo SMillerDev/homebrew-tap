@@ -7,8 +7,8 @@ class PhpXdebug < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-xdebug-3.0.2"
-    sha256 "5ef3930b238f22b963911aceb705962e1f3d93a544f98cc998f2926f5395f982" => :catalina
-    sha256 "b10947a6e5b2fad94f8b28a488e7f0c4a4d15f48e3c3cfc4eec0bcad4841a126" => :x86_64_linux
+    sha256 catalina:     "5ef3930b238f22b963911aceb705962e1f3d93a544f98cc998f2926f5395f982"
+    sha256 x86_64_linux: "b10947a6e5b2fad94f8b28a488e7f0c4a4d15f48e3c3cfc4eec0bcad4841a126"
   end
 
   depends_on "autoconf" => :build

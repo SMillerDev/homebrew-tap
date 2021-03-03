@@ -7,9 +7,8 @@ class Decomposer < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/decomposer-1.0.0"
-    cellar :any_skip_relocation
-    sha256 "1504fd2a8baa5595b080953ddb821b53f9b144039bd7ff38604e61cf46ca70d3" => :catalina
-    sha256 "f3ccc4198912dc0e5f6d956180456b6963fd01151300c97b29d5d2e4a771079f" => :x86_64_linux
+    sha256 cellar: :any_skip_relocation, catalina:     "1504fd2a8baa5595b080953ddb821b53f9b144039bd7ff38604e61cf46ca70d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f3ccc4198912dc0e5f6d956180456b6963fd01151300c97b29d5d2e4a771079f"
   end
 
   depends_on "scdoc" => :build
