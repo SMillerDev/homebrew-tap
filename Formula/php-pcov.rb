@@ -5,6 +5,12 @@ class PhpPcov < Formula
   sha256 "3be3b8af91c43db70c4893dd2552c9ee2877e9cf32f59a607846c9ceb64a173b"
   head "https://github.com/krakjoe/pcov.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-pcov-1.0.6"
+    sha256 cellar: :any_skip_relocation, catalina:     "7bf01a239eb86fd6f5ea262aa40e29dc8905fad451857b2887c8d0f9e0842492"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "95e2d17d139f4b5debe97cfa32d13f7523d4a5364e0372c9fc6946e591d57363"
+  end
+
   depends_on "php"
 
   def module_path
