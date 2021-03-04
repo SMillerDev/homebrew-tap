@@ -1,4 +1,4 @@
-class PhpPropro < Formula
+class PhpAT74Propro < Formula
   desc "ProPro Extension for PHP"
   homepage "https://pecl.php.net/propro"
   url "https://pecl.php.net/get/propro-2.1.0.tgz"
@@ -7,28 +7,30 @@ class PhpPropro < Formula
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
-  depends_on "php"
+  depends_on "php@7.4"
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin/"php-config"} --extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{Formula["php@7.4"].opt_bin/"php-config"} --extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
 
   def install
     cd "propro-#{version}"
-    system Formula["php"].bin/"phpize"
+    system Formula["php@7.4"].bin/"phpize"
     configure_args = %W[
-      --with-php-config=#{Formula["php"].opt_bin/"php-config"}
+      --with-php-config=#{Formula["php@7.4"].opt_bin/"php-config"}
     ]
     system "./configure", *configure_args
     system "make"
-    include.install %w[php_propro.h src/php_propro_api.h]
+
+    mkdir_p include/"propro@7.4"
+    (include/"propro@7.4").install %w[php_propro.h src/php_propro_api.h]
     (lib/module_path).install "modules/propro.so"
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-propro.ini"
+    ext_config_path = etc/"php"/Formula["php@7.4"].version.major_minor/"conf.d"/"ext-propro.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/propro.so\""
@@ -41,7 +43,7 @@ class PhpPropro < Formula
   end
 
   test do
-    assert_match "propro", shell_output("#{Formula["php"].opt_bin}/php -m").downcase,
+    assert_match "propro", shell_output("#{Formula["php@7.4"].opt_bin}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
