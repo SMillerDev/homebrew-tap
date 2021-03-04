@@ -1,11 +1,9 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
-  homepage "https://pecl.php.net/pecl_http"
-  url "https://pecl.php.net/get/pecl_http-3.2.3.tgz"
-  sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
+  homepage "https://github.com/m6w6/ext-http"
+  url "https://pecl.php.net/get/pecl_http-4.0.0.tgz"
+  sha256 "ea9a508578cffd428baf7b78f6d1618badedf3175be06b0809588a8b48889d5f"
   head "https://github.com/m6w6/ext-http.git"
-
-  disable! date: "2021-03-01", because: "support pending" unless build.head?
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
@@ -22,10 +20,9 @@ class PhpHttp < Formula
     cd "pecl_http-#{version}"
     system Formula["php"].bin/"phpize"
 
+    mkdir "ext"
     # link in the raphf extension header
-    mkdir_p "ext/raphf"
-    cp "#{Formula["php-raphf"].opt_include}/php_raphf.h", "ext/raphf/php_raphf.h"
-    cp "#{Formula["php-raphf"].opt_include}/php_raphf_api.h", "ext/raphf/php_raphf_api.h"
+    cp_r "#{Formula["php-raphf"].include}/raphf", "ext/raphf"
 
     configure_args = %W[
       --with-http
