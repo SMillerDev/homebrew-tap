@@ -6,6 +6,12 @@ class PhpRaphf < Formula
   revision 1
   head "https://github.com/m6w6/ext-raphf.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-raphf-2.0.1_1"
+    sha256 cellar: :any_skip_relocation, catalina:     "7eb3765bd702873802fddfa5f79efeeba43f2ce3adc3f1399b499b5af5856451"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6b4f84fea14ef4d22ffcb263d7579924d8a94853ba32563e2618afbd9cf6dcaa"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php"
