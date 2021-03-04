@@ -5,6 +5,12 @@ class PhpAT74AutoloadPsr < Formula
   sha256 "edee4c0fb8d66238509e080697a868ad454444242ffb269cb52c6cceabd04c2c"
   head "https://github.com/pprkut/autoload-psr.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-autoload-psr-0.1.2"
+    sha256 cellar: :any_skip_relocation, catalina:     "8a523bd5672c1d2027f9fc34eaffecdceb629a1796bccfc3b3f6b1bcd605c0c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3217db38bf50ad45b26ab212b11547eef8d95be6fd85e1563b11cbf0d0bfb613"
+  end
+
   depends_on "autoconf" => :build
   depends_on "php@7.4"
 
