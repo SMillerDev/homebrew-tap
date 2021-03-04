@@ -6,9 +6,9 @@ class PhpAT74Xdebug < Formula
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-xdebug-3.0.2"
-    sha256 catalina:     "3c8e0defc4c211b7451ebc28c861dd6cb08f377d15a61133be2b0b42b33274c7"
-    sha256 x86_64_linux: "a1efa715f6187e9e3812335c52556138044c381857ab2a761c481ca99ed23b6b"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-xdebug-3.0.3"
+    sha256 catalina:     "bfc980a3b1c38a6ad15c5eb59f958cdec645bf32fcfea153e2eebde29d8d93e6"
+    sha256 x86_64_linux: "525674d97cd8fefc61d405bc0e0955138b232483311f75636bcc1d0553ce2653"
   end
 
   depends_on "autoconf" => :build
