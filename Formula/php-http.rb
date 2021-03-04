@@ -5,10 +5,11 @@ class PhpHttp < Formula
   sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
   head "https://github.com/m6w6/ext-http.git"
 
+  disable! date: "2021-03-01", because: "support pending" unless build.head?
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php"
-  depends_on "php-propro"
   depends_on "php-raphf"
 
   def module_path
@@ -23,13 +24,8 @@ class PhpHttp < Formula
 
     # link in the raphf extension header
     mkdir_p "ext/raphf"
-    cp "#{Formula["php-raphf"].opt_prefix}/include/php_raphf.h", "ext/raphf/php_raphf.h"
-    cp "#{Formula["php-raphf"].opt_prefix}/include/php_raphf_api.h", "ext/raphf/php_raphf_api.h"
-
-    # link in the propro extension header
-    mkdir_p "ext/propro"
-    cp "#{Formula["php-propro"].opt_prefix}/include/php_propro.h", "ext/propro/php_propro.h"
-    cp "#{Formula["php-propro"].opt_prefix}/include/php_propro_api.h", "ext/propro/php_propro_api.h"
+    cp "#{Formula["php-raphf"].opt_include}/php_raphf.h", "ext/raphf/php_raphf.h"
+    cp "#{Formula["php-raphf"].opt_include}/php_raphf_api.h", "ext/raphf/php_raphf_api.h"
 
     configure_args = %W[
       --with-http
