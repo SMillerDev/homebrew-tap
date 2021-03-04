@@ -5,6 +5,12 @@ class PhpAT74Propro < Formula
   sha256 "7bba0653d90cd8f61816e13ac6c0f7102b4a16dc4c4e966095a121eeb4ae8271"
   head "https://github.com/m6w6/ext-propro.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-propro-2.1.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "c39b80b1edf5de40187ffd998ed746d88b91b928a995f492652fcf054703c9e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "46a7896041a80639beda33671637aaca222fc5a5801d6ca197ce8279ac9e1376"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@7.4"
