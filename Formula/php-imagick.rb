@@ -5,6 +5,8 @@ class PhpImagick < Formula
   sha256 "8dd5aa16465c218651fc8993e1faecd982e6a597870fd4b937e9ece02d567077"
   head "https://github.com/Imagick/imagick.git"
 
+  disable! date: "2021-03-01", because: "support pending" unless build.head?
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "imagemagick"
