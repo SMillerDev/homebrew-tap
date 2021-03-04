@@ -5,6 +5,12 @@ class PhpAT74Raphf < Formula
   sha256 "da3566db17422e5ef08b7ff144162952aabc14cb22407cc6b1d2a2d095812bd0"
   head "https://github.com/m6w6/ext-raphf.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-raphf-2.0.1"
+    sha256 cellar: :any_skip_relocation, catalina:     "d67d356443523b294cefb8f25fbebbf59060d9c5b391e52f1f6f84097ecbec92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "06c304173d3515dede6e5fcfa892279fd953efa666283db4ad308d2534596190"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@7.4"
