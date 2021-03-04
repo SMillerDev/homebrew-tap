@@ -5,8 +5,10 @@ class TestKitchen < Formula
   sha256 "5bf08e95c2cc31bcf7d533767210846d3df51855714062663b4d92ea1caf433e"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
-  uses_from_macos "libffi"
-  uses_from_macos "ruby", since: :sierra
+  depends_on "pkg-config" => :build
+  depends_on "ruby@2.7"
+
+  uses_from_macos "libffi", since: :catalina
 
   def install
     ENV["GEM_HOME"] = libexec
@@ -20,6 +22,11 @@ class TestKitchen < Formula
     system "gem", "install", "kitchen-salt", "--norc", "--no-document"
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
     system "gem", "install", "kitchen-docker", "--norc", "--no-document"
+
+    on_macos do
+      ext_path = "extensions/#{Hardware::CPU.arch}-darwin-*/*/ffi-*/mkmf.log"
+      rm_f Dir[libexec/ext_path.to_s, libexec/"ruby/*/#{ext_path}"]
+    end
 
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     (bin/"kitchen").write_env_script(libexec/"bin/kitchen", GEM_PATH: libexec)
