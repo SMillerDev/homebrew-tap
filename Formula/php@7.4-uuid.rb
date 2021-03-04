@@ -5,6 +5,11 @@ class PhpAT74Uuid < Formula
   sha256 "5cb834d32fa7d270494aa47fd96e062ef819df59d247788562695fd1f4e470a4"
   head "https://github.com/php/pecl-networking-uuid.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-uuid-1.2.0"
+    sha256 cellar: :any_skip_relocation, catalina: "8a1acd99d077387e8a6509578c87db45c5be6781ee9d95eaeae53c1b6c503aab"
+  end
+
   depends_on "autoconf" => :build
   depends_on :macos
   depends_on "ossp-uuid"
