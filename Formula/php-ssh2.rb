@@ -1,12 +1,14 @@
 class PhpSsh2 < Formula
   desc "SSH2 Extension for PHP"
   homepage "https://pecl.php.net/ssh2"
-  url "https://pecl.php.net/get/ssh2-1.2.tgz"
-  sha256 "7f9f205f5b555692f7b010ffb68a01e21860176062f2ec14dc577d994cecd929"
+  url "https://pecl.php.net/get/ssh2-1.3.1.tgz"
+  sha256 "9093a1f8d24dc65836027b0e239c50de8d5eaebf8396bc3331fdd38c5d69afd9"
   head "https://git.php.net/repository/pecl/networking/ssh2.git"
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
+
+  depends_on "libssh2"
   depends_on "php"
 
   def module_path
@@ -20,6 +22,7 @@ class PhpSsh2 < Formula
     system Formula["php"].bin/"phpize"
     configure_args = %W[
       --with-php-config=#{Formula["php"].opt_bin/"php-config"}
+      --with-ssh2=#{Formula["libssh2"].opt_prefix}
     ]
     system "./configure", *configure_args
     system "make"
