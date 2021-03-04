@@ -6,6 +6,7 @@ class Jsonschema < Formula
   url "https://github.com/Julian/jsonschema.git",
     revision: "5e0fea13189bf118eadc8c812eed08f0751b8394"
   version "3.2.99"
+  revision 1
   head "https://github.com/Julian/jsonschema.git"
 
   depends_on "python@3.8"
