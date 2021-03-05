@@ -5,6 +5,12 @@ class PhpAT74Http < Formula
   sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
   head "https://github.com/m6w6/ext-http.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-http-3.2.3"
+    sha256                               catalina:     "af9dbe0d810d6b19c7b458235eb8da332065b2c4d6b0877418a124767e44a7e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1f1d835e3a7f6eb3b23602cba32ce9f1020a08c5063af45a1aa895d0b50d87d5"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@7.4"
