@@ -5,6 +5,12 @@ class PhpAT74Ssh2 < Formula
   sha256 "9093a1f8d24dc65836027b0e239c50de8d5eaebf8396bc3331fdd38c5d69afd9"
   head "https://git.php.net/repository/pecl/networking/ssh2.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-ssh2-1.3.1"
+    sha256                               catalina:     "b438e4ff1a5e01626f48e85271a348f6af4deacc3af0eb7c82dfccb500219cf5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ff3bb21115ff67d2c058f7ce0971984b1a18d0d50a741cc4c20c102d235fcb80"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
 
