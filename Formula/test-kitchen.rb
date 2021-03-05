@@ -5,6 +5,12 @@ class TestKitchen < Formula
   sha256 "5bf08e95c2cc31bcf7d533767210846d3df51855714062663b4d92ea1caf433e"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/test-kitchen-2.11.1"
+    sha256 cellar: :any,                 catalina:     "7364f38e082280974690c5497aeaec203655ea46fc04748c88682b91b0ee94cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cad9e1dc174bae7bda10b61426cdaf7320131f012f6bc19d32470dea72476d66"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "ruby@2.7"
 
