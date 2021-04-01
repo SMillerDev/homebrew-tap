@@ -1,8 +1,8 @@
 class PhpAT74Pcov < Formula
   desc "CodeCoverage compatible driver for PHP7"
   homepage "https://github.com/krakjoe/pcov"
-  url "https://github.com/krakjoe/pcov/archive/v1.0.6.tar.gz"
-  sha256 "3be3b8af91c43db70c4893dd2552c9ee2877e9cf32f59a607846c9ceb64a173b"
+  url "https://github.com/krakjoe/pcov/archive/v1.0.8.tar.gz"
+  sha256 "f67a1c1aabe798e5bb85d0ea8c7b1d27b226b066d12460da8d78b48bfc6f455e"
   head "https://github.com/krakjoe/pcov.git"
 
   bottle do
