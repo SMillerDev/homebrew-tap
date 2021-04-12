@@ -6,9 +6,9 @@ class PhpXdebug < Formula
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-xdebug-3.0.3"
-    sha256 catalina:     "76fe262f961fbdf0217157152fa0f744ed066ae445706a3bddc44517080cc4c3"
-    sha256 x86_64_linux: "9c92ba0b2e7ff369422f5735d862db137cf00b4ddf69bc35339c5d59fc4809f1"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-xdebug-3.0.4"
+    sha256 catalina:     "18848a901f9fcb7b17450dfec250bb24cafcd589c473a8735dacd7f7fa216048"
+    sha256 x86_64_linux: "cd8c33069cf05d651f1ba88ded4e949fa751fedf75924affc095ec5431e22d80"
   end
 
   depends_on "autoconf" => :build
