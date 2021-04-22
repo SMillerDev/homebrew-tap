@@ -4,6 +4,10 @@ class PhpAT74Ssh2 < Formula
   url "https://pecl.php.net/get/ssh2-1.3.1.tgz"
   sha256 "9093a1f8d24dc65836027b0e239c50de8d5eaebf8396bc3331fdd38c5d69afd9"
   head "https://git.php.net/repository/pecl/networking/ssh2.git"
+  
+  livecheck do
+    url :stable
+  end
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-ssh2-1.3.1"
