@@ -5,6 +5,10 @@ class PhpAT74Uopz < Formula
   sha256 "d84b8a2ed89afc174be2dd2771410029deaf5796a2473162f94681885a4d39a8"
   head "https://github.com/krakjoe/uopz.git"
 
+  livecheck do
+    url :stable
+  end
+
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-uopz-6.1.2"
     sha256 cellar: :any_skip_relocation, catalina:     "5ee419736b0d5ac86854a7aaa00427416b4a0748ab9926e2de4ead44beed299b"
