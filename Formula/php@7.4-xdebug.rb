@@ -4,6 +4,10 @@ class PhpAT74Xdebug < Formula
   url "https://xdebug.org/files/xdebug-3.0.4.tgz"
   sha256 "b27290491f4634b0cd3badfc3a2be98fb1e3c0c3710a706724d8b195baad72af"
   head "https://github.com/xdebug/xdebug.git"
+  
+  livecheck do
+    url :stable
+  end
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-xdebug-3.0.4"
