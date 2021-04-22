@@ -6,7 +6,7 @@ class PhpAT74Uopz < Formula
   head "https://github.com/krakjoe/uopz.git"
 
   livecheck do
-    url :stable
+    url :head
   end
 
   bottle do

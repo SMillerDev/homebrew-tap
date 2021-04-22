@@ -6,7 +6,7 @@ class PhpAT74Imagick < Formula
   head "https://github.com/Imagick/imagick.git"
 
   livecheck do
-    url :stable
+    url :head
   end
 
   bottle do
