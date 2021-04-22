@@ -1,8 +1,8 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://github.com/m6w6/ext-http"
-  url "https://pecl.php.net/get/pecl_http-4.0.0.tgz"
-  sha256 "ea9a508578cffd428baf7b78f6d1618badedf3175be06b0809588a8b48889d5f"
+  url "https://pecl.php.net/get/pecl_http-4.1.0.tgz"
+  sha256 "f8b3a0827c4c8c97ef00d51d09c63fa4203f895bd737f954062c16bae3b8ab1e"
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
