@@ -4,6 +4,10 @@ class PhpAT74Raphf < Formula
   url "https://pecl.php.net/get/raphf-2.0.1.tgz"
   sha256 "da3566db17422e5ef08b7ff144162952aabc14cb22407cc6b1d2a2d095812bd0"
   head "https://github.com/m6w6/ext-raphf.git"
+  
+  livecheck do
+    url :stable
+  end
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-raphf-2.0.1"
