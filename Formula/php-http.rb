@@ -6,9 +6,9 @@ class PhpHttp < Formula
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-http-4.0.0"
-    sha256                               catalina:     "07f14a1c9185fd09fdae1f7277f7dd8ac6e0745a4fa50d3dc9fcab0d289fed53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c4c372267ee201d83aa2379a9e0e5eef9a712e054daa7a8efbdc2c2bace97e52"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-http-4.1.0"
+    sha256                               catalina:     "f9de79a68a0b5bb79782552afe37d60b11647af36dc20a40afc7bc03030e2319"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4d3477fec927c9455469390187c20ddaf892e96c0dd2d1d35561537c06f22bbf"
   end
 
   depends_on "autoconf" => :build
