@@ -6,7 +6,7 @@ class PhpAT74Uuid < Formula
   head "https://github.com/php/pecl-networking-uuid.git"
 
   livecheck do
-    url :stable
+    url :head
   end
 
   bottle do
