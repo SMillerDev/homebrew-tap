@@ -5,6 +5,10 @@ class PhpAT74Imagick < Formula
   sha256 "8dd5aa16465c218651fc8993e1faecd982e6a597870fd4b937e9ece02d567077"
   head "https://github.com/Imagick/imagick.git"
 
+  livecheck do
+    url :stable
+  end
+
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-imagick-3.4.4"
     sha256                               catalina:     "d3f91863f66f3200d7c804574f83c514f33462a9c9cec7ee98567e34be02bb19"
