@@ -5,6 +5,12 @@ class PhpImagick < Formula
   sha256 "795db7c36fbacd3d33a4f53ff2d38584c846e80a04dcd04c55e9e46c28f5d229"
   head "https://github.com/Imagick/imagick.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-imagick-3.5.0"
+    sha256                               catalina:     "fd9fc3482951177f45fe1a07b6de20d18e8c885da03e363e49a51c81dd084f09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "dbb1f210e693120b398138b3b5ef6adf659c7189b8e0c35f53fd515173897c80"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "imagemagick"
