@@ -1,8 +1,8 @@
 class PhpAT74Imagick < Formula
   desc "Imagick Extension for PHP"
   homepage "https://pecl.php.net/imagick"
-  url "https://pecl.php.net/get/imagick-3.5.0.tgz"
-  sha256 "795db7c36fbacd3d33a4f53ff2d38584c846e80a04dcd04c55e9e46c28f5d229"
+  url "https://pecl.php.net/get/imagick-3.5.1.tgz"
+  sha256 "243ff2094edcacb2ae46ee3a4d9f38a60a4f26a6a71f59023b6198cbed0f7f81"
   head "https://github.com/Imagick/imagick.git"
 
   livecheck do
