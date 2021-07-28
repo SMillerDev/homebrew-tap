@@ -10,9 +10,9 @@ class PhpAT74Imagick < Formula
   end
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-imagick-3.5.0"
-    sha256                               catalina:     "d4ce75cbc668e7e27df858909baf209786e9dc278760178dee2c384869d01f6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5277c617cc133dc9150f70443757e7a40a35b027f68e070b1b73726e8739a738"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-imagick-3.5.1"
+    sha256                               catalina:     "94f89866705988f9e19c56e4e7090b46033e4807e773cf8a9b89f62e74a936d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "33855f79be83c504a8e7cc1258df4429b9394ddac62d73f90e3fe6b2a3114392"
   end
 
   depends_on "autoconf" => :build
