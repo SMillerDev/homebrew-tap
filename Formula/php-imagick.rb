@@ -6,9 +6,9 @@ class PhpImagick < Formula
   head "https://github.com/Imagick/imagick.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-imagick-3.5.0"
-    sha256                               catalina:     "fd9fc3482951177f45fe1a07b6de20d18e8c885da03e363e49a51c81dd084f09"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "dbb1f210e693120b398138b3b5ef6adf659c7189b8e0c35f53fd515173897c80"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-imagick-3.5.1"
+    sha256                               catalina:     "1e97e55ee282769bb26eba397e474e58f748a5cb62d90e5f21fdd222aba9a822"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d81133d43a99621ac16f2711d6aba310612c4b9fd60268159007c833915f75ba"
   end
 
   depends_on "autoconf" => :build
