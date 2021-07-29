@@ -5,6 +5,12 @@ class PhpUopz < Formula
   sha256 "955de7e28f74fb83033bfb29fa5c1350400ea894bbec5cda79f63563ef6ae775"
   head "https://github.com/krakjoe/uopz.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz-7.0.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "d1a589d5e75e697c9400e9f70b9ee8054f3d8acc22180384db91cfc29d9fc07c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "675f91037bd4e2c9d406a450cd04617ebc7d59067d913b8462becc582e071879"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php"
