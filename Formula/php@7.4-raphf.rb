@@ -6,7 +6,7 @@ class PhpAT74Raphf < Formula
   head "https://github.com/m6w6/ext-raphf.git"
 
   livecheck do
-    url :stable
+    skip "latest for php 7.4"
   end
 
   bottle do

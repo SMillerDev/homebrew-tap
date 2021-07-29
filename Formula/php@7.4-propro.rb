@@ -6,7 +6,7 @@ class PhpAT74Propro < Formula
   head "https://github.com/m6w6/ext-propro.git"
 
   livecheck do
-    url :stable
+    skip "latest for php 7.4"
   end
 
   bottle do

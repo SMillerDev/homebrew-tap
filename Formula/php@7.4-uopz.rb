@@ -6,7 +6,7 @@ class PhpAT74Uopz < Formula
   head "https://github.com/krakjoe/uopz.git"
 
   livecheck do
-    url :head
+    skip "latest for php 7.4"
   end
 
   bottle do
