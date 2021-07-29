@@ -1,11 +1,9 @@
 class PhpUopz < Formula
   desc "UOPZ Extension for PHP"
   homepage "https://pecl.php.net/uopz"
-  url "https://pecl.php.net/get/uopz-6.1.2.tgz"
-  sha256 "d84b8a2ed89afc174be2dd2771410029deaf5796a2473162f94681885a4d39a8"
+  url "https://pecl.php.net/get/uopz-7.0.0.tgz"
+  sha256 "955de7e28f74fb83033bfb29fa5c1350400ea894bbec5cda79f63563ef6ae775"
   head "https://github.com/krakjoe/uopz.git"
-
-  disable! date: "2021-03-01", because: "support pending" unless build.head?
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
