@@ -1,8 +1,8 @@
 class Phpcpd < Formula
   desc "Programmer-oriented testing framework for PHP"
   homepage "https://phpunit.de"
-  url "https://phar.phpunit.de/phpcpd-5.0.2.phar"
-  sha256 "12e94af9928be2f33fd394d2cc5d96b3925de24d614381d06b3096cc9eeabbcb"
+  url "https://phar.phpunit.de/phpcpd-6.0.3.phar"
+  sha256 "2cbaea7cfda1bb4299d863eb075e977c3f49055dd16d88529fae5150d48a84cb"
   head "https://github.com/sebastianbergmann/phpcpd.git"
 
   bottle :unneeded
