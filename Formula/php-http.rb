@@ -1,8 +1,8 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://github.com/m6w6/ext-http"
-  url "https://pecl.php.net/get/pecl_http-4.1.0.tgz"
-  sha256 "f8b3a0827c4c8c97ef00d51d09c63fa4203f895bd737f954062c16bae3b8ab1e"
+  url "https://pecl.php.net/get/pecl_http-4.2.0.tgz"
+  sha256 "9898c2e2b2c78ce11fca1cb3a151ff201ce957afb8b8c1985a52dd5eae35812e"
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
@@ -13,6 +13,7 @@ class PhpHttp < Formula
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
+  depends_on "curl"
   depends_on "php"
   depends_on "php-raphf"
 
@@ -39,7 +40,7 @@ class PhpHttp < Formula
       --with-libdir=/usr/local/lib
       --with-php-config=#{Formula["php"].opt_bin/"php-config"}
       --with-http-zlib-dir=#{MacOS.sdk_path_if_needed}/usr
-      --with-http-libcurl-dir=#{MacOS.sdk_path_if_needed}/usr
+      --with-http-libcurl-dir=#{Formula["curl"].opt_lib}
       --with-http-libicu-dir=#{MacOS.sdk_path_if_needed}/usr
     ]
     system "./configure", *configure_args
@@ -48,7 +49,7 @@ class PhpHttp < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-http.ini"
+    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"20-ext-http.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/http.so\""
