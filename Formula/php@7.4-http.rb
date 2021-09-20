@@ -1,8 +1,8 @@
 class PhpAT74Http < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://github.com/m6w6/ext-http"
-  url "https://pecl.php.net/get/pecl_http-3.2.4.tgz"
-  sha256 "37354ff7680b9b9839da8b908fff88227af7f6746c2611c873493af41d54f033"
+  url "https://pecl.php.net/get/pecl_http-3.2.3.tgz"
+  sha256 "cf9d2a2ed335e572366025eca1d69e86c585f96ca07db341839a06f52ee4aa88"
   head "https://github.com/m6w6/ext-http.git"
 
   livecheck do
@@ -56,7 +56,7 @@ class PhpAT74Http < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php@7.4"].version.major_minor/"conf.d"/"ext-http.ini"
+    ext_config_path = etc/"php"/Formula["php@7.4"].version.major_minor/"conf.d"/"20-ext-http.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/http.so\""
