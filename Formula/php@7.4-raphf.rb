@@ -40,7 +40,7 @@ class PhpAT74Raphf < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php@7.4"].version.major_minor/"conf.d"/"ext-raphf.ini"
+    ext_config_path = etc/"php"/Formula["php@7.4"].version.major_minor/"conf.d"/"10-ext-raphf.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/raphf.so\""
