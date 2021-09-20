@@ -29,7 +29,7 @@ class TestKitchen < Formula
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
     system "gem", "install", "kitchen-docker", "--norc", "--no-document"
 
-    on_macos do
+    if OS.mac?
       ext_path = "extensions/#{Hardware::CPU.arch}-darwin-*/*/ffi-*/mkmf.log"
       rm_f Dir[libexec/ext_path.to_s, libexec/"ruby/*/#{ext_path}"]
     end
