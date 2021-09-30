@@ -3,8 +3,8 @@ class Jsonschema < Formula
 
   desc "Implementation of JSON Schema for Python"
   homepage "https://github.com/Julian/jsonschema"
-  url "https://files.pythonhosted.org/packages/ee/10/f2137346cd9568f1a92a9c6c12b086bc14223f16e90ab04d8c8edf36d39d/jsonschema-4.0.0a1.tar.gz"
-  sha256 "6fbbcc8035b0d8722146b8a90ada08fcd910b731aa0c920b757be9c081bc849f"
+  url "https://files.pythonhosted.org/packages/9c/99/9789c7fd0bb8876a7d624d903195ce11e5618b421bdb1bf7c975d17a9bc3/jsonschema-4.0.0.tar.gz"
+  sha256 "bc51325b929171791c42ebc1c70b9713eb134d3bb8ebd5474c8b659b15be6d86"
   head "https://github.com/Julian/jsonschema.git"
 
   bottle do
@@ -22,8 +22,8 @@ class Jsonschema < Formula
   end
 
   resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/4d/70/fd441df751ba8b620e03fd2d2d9ca902103119616f0f6cc42e6405035062/pyrsistent-0.17.3.tar.gz"
-    sha256 "2e636185d9eb976a18a8a8e96efce62f2905fea90041958d8cc2a189756ebf3e"
+    url "https://files.pythonhosted.org/packages/f4/d7/0fa558c4fb00f15aabc6d42d365fcca7a15fcc1091cd0f5784a14f390b7f/pyrsistent-0.18.0.tar.gz"
+    sha256 "773c781216f8c2900b42a7b638d5b517bb134ae1acbebe4d1e8f1f41ea60eb4b"
   end
 
   def install
