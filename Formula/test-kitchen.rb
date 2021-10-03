@@ -6,9 +6,9 @@ class TestKitchen < Formula
   head "https://github.com/test-kitchen/test-kitchen.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/test-kitchen-3.0.0"
-    sha256 cellar: :any,                 catalina:     "4c2d3f21444bcd44ccb158d545076663b1867f1e5ce4b7bb1465f162cce0385a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d939fee093426abbc3f82c1f8e18536e56a8d7c69233a5d7ee1c6310b462293b"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/test-kitchen-3.1.0"
+    sha256 cellar: :any,                 catalina:     "e93956639d15897810b6d6a6db8166630dd55e5cf9a712bb7ed722ef0fa5ce7b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a262b731f312183cc551610e5873f1dac3f705db2e535f34760464f2fd263341"
   end
 
   depends_on "pkg-config" => :build
