@@ -10,9 +10,9 @@ class PhpAT74Xdebug < Formula
   end
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-xdebug-3.1.0"
-    sha256 catalina:     "0c0004d23bbd9f1089aab27e40b8b6a91feced922c5ac4f2649e2f0f421380a6"
-    sha256 x86_64_linux: "c77c480670135cba94ac090a707d77b4c13212a0ccfc6129734b559ec24ffed8"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-xdebug-3.1.1"
+    sha256 catalina:     "57d0580eadfd57c85c47673b4ad5f0e0ddffb4e9ab81c347dbbef2f067493980"
+    sha256 x86_64_linux: "8fc511d49b7ab2ff82591a92d5bd596a9d236958f2f7af153ee1ee6be724ed98"
   end
 
   depends_on "autoconf" => :build
