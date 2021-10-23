@@ -5,8 +5,6 @@ class Phpdraft < Formula
   sha256 "2763bc552687cdaf667b02db506a42a9db75355e97f129122dda13e6fdc1be86"
   head "https://github.com/SMillerDev/phpdraft.git"
 
-  bottle :unneeded
-
   depends_on "php" => :test
   depends_on "drafter"
 
