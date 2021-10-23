@@ -5,8 +5,6 @@ class Phpcpd < Formula
   sha256 "2cbaea7cfda1bb4299d863eb075e977c3f49055dd16d88529fae5150d48a84cb"
   head "https://github.com/sebastianbergmann/phpcpd.git"
 
-  bottle :unneeded
-
   depends_on "php" => :test
 
   def install
