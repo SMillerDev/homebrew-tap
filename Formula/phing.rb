@@ -1,11 +1,9 @@
 class Phing < Formula
   desc "Not GNU make"
   homepage "https://www.phing.info"
-  url "https://www.phing.info/get/phing-2.16.1.phar"
-  sha256 "dcc7b63e1a1f8e1599b0fb33a02b053ee9adcdd2885538e36d7e1f5c81062040"
+  url "https://www.phing.info/get/phing-2.17.0.phar"
+  sha256 "1703462b5c3ab7841c760cbae6a4a7f3cfda2acd715fd34b663ab13f2ac96546"
   head "https://github.com/phingofficial/phing.git"
-
-  bottle :unneeded
 
   depends_on "php" => :test
 
