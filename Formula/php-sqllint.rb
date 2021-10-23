@@ -5,8 +5,6 @@ class PhpSqllint < Formula
   sha256 "a02b50ee2bfd20a67da9c6786b72611c9c1bdd969ed1fa1a3565644881b095df"
   license "AGPL-3.0-or-later"
 
-  bottle :unneeded
-
   depends_on "php"
 
   def install
