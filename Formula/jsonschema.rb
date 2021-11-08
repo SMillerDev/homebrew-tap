@@ -8,9 +8,9 @@ class Jsonschema < Formula
   head "https://github.com/Julian/jsonschema.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/jsonschema-4.1.2"
-    sha256 cellar: :any_skip_relocation, catalina:     "dcb1a9549e3068020b7d4e4878767d962a0f443ef07ed1045e80fd01953dc3e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "04fde5ffc39fe7d76ac6d83c73b3e705e6b8f0c60ace509bd876be86818ac100"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/jsonschema-4.2.1"
+    sha256 cellar: :any_skip_relocation, catalina:     "cb58b52ada500fd2b5333a65bdcc4f72b0aebab43038893735beca7e996556bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b017273b6613efee8cb70236336aef688bd247149bed2a4b04496aacab2d1c73"
   end
 
   depends_on "python@3.9"
