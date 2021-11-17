@@ -15,8 +15,6 @@ class TeleportAT7 < Formula
   uses_from_macos "netcat" => :test
   uses_from_macos "zip"
 
-  conflicts_with "etsh", because: "both install `tsh` binaries"
-
   # Keep this in sync with https://github.com/gravitational/teleport/tree/v#{version}
   resource "webassets" do
     url "https://github.com/gravitational/webassets/archive/07493a5e78677de448b0e35bd72bf1dc6498b5ea.tar.gz"
