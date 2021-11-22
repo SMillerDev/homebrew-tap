@@ -6,6 +6,12 @@ class TeleportAT7 < Formula
   license "Apache-2.0"
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/teleport@7-7.3.3"
+    sha256 cellar: :any_skip_relocation, catalina:     "86fac2db9b00b6a580e92db8231111af9b7fc18bfa84d4752363f100744cc766"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a4055c3a33b60b6d68de1ff2479f550b3d8a497dabf7919a5a7e978ff98261d7"
+  end
+
   # This version will live as long as I'm affected by https://github.com/gravitational/teleport/issues/9028
   deprecate! date: "2021-11-17", because: :versioned_formula
 
