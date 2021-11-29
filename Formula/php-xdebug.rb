@@ -3,6 +3,7 @@ class PhpXdebug < Formula
   homepage "https://xdebug.org"
   url "https://xdebug.org/files/xdebug-3.1.1.tgz"
   sha256 "9be3ae0fdb4dc4a4c68084626cddc56f12396487e309a8c8dd318f0f900d1a68"
+  revision 1
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
