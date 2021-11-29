@@ -3,6 +3,7 @@ class PhpPcov < Formula
   homepage "https://github.com/krakjoe/pcov"
   url "https://github.com/krakjoe/pcov/archive/v1.0.10.tar.gz"
   sha256 "1fd2748f2db4dbbf5f6ac1691b6bd528d23522e0fcdeeda63cbb9de2a0e8d445"
+  revision 1
   head "https://github.com/krakjoe/pcov.git"
 
   bottle do
