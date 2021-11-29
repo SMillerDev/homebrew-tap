@@ -3,6 +3,7 @@ class PhpAutoloadPsr < Formula
   homepage "https://github.com/pprkut/autoload-psr"
   url "https://github.com/pprkut/autoload-psr/archive/0.1.2.tar.gz"
   sha256 "edee4c0fb8d66238509e080697a868ad454444242ffb269cb52c6cceabd04c2c"
+  revision 1
   head "https://github.com/pprkut/autoload-psr.git"
 
   disable! date: "2021-03-01", because: "support pending"
