@@ -1,9 +1,8 @@
 class PhpUopz < Formula
   desc "UOPZ Extension for PHP"
   homepage "https://pecl.php.net/uopz"
-  url "https://pecl.php.net/get/uopz-7.1.0.tgz"
-  sha256 "d00fe653c9ed83c915b0a3398c313bddf845a16548863e2b509c491ec0134d80"
-  revision 1
+  url "https://pecl.php.net/get/uopz-7.1.1.tgz"
+  sha256 "50fa50a5340c76fe3495727637937eaf05cfe20bf93af19400ebf5e9d052ece3"
   head "https://github.com/krakjoe/uopz.git"
 
   bottle do
