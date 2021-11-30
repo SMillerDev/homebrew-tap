@@ -7,9 +7,10 @@ class PhpRaphf < Formula
   head "https://github.com/m6w6/ext-raphf.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-raphf-2.0.1_1"
-    sha256 cellar: :any_skip_relocation, catalina:     "7eb3765bd702873802fddfa5f79efeeba43f2ce3adc3f1399b499b5af5856451"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6b4f84fea14ef4d22ffcb263d7579924d8a94853ba32563e2618afbd9cf6dcaa"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-raphf-2.0.1_2"
+    sha256 cellar: :any_skip_relocation, big_sur:      "bdf9b11b9222499726c43062272286a9b3fddcefabde8e7beef704c12b076746"
+    sha256 cellar: :any_skip_relocation, catalina:     "013f576aa5c5ddfa1f974c3b2e9a96466c6de462de08a9f3993b20682ab3bd50"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fe903cdbe505d8a8684b38b331f76188c57d5ab9cc0de547d3d39327f7cd80c7"
   end
 
   depends_on "autoconf" => :build
