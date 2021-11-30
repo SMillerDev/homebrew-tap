@@ -7,9 +7,10 @@ class PhpSsh2 < Formula
   head "https://github.com/php/pecl-networking-ssh2.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-ssh2-1.3.1"
-    sha256                               catalina:     "f90bbe34026429a959813b4b4c5aae2744b2bd8fbda84bec5f8abc1b80897bbb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3189a4208def169a45f132e986ff9e147d045d2a7e28676492322d82250254e7"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-ssh2-1.3.1_1"
+    sha256                               big_sur:      "db7bfb9a7289f6b68d3024f7c66cc1f5067c5a6c8cfd4be9a74270142c486b7d"
+    sha256                               catalina:     "3415a4ffaad18173446f747aac93d9d282bd4be5e138572cc3b5288e9978800c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "74ca83a32abb520b6393c24716707c44a1d1888e0873e784341649f302516453"
   end
 
   depends_on "autoconf" => :build
