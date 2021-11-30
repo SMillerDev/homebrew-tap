@@ -7,9 +7,10 @@ class PhpPcov < Formula
   head "https://github.com/krakjoe/pcov.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-pcov-1.0.10"
-    sha256 cellar: :any_skip_relocation, catalina:     "1bd1ff1c43d76753793ad9906bcd96f34997ff8d10bf63245bc549aa71132bfd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "df5c46148711cfa8c43707a0e555e90a558bf0c487425caa1ad0100d0a723d53"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-pcov-1.0.10_1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "99b305022ea5efb5c055f9a50fda308ff27e61efeb0641018304813508c75438"
+    sha256 cellar: :any_skip_relocation, catalina:     "35e06ba99b79f94b7e544526f0f239133ffcb5f34efd11289f074bc6b13a512e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7f9590d57d4beb491fb7efd49bb405044d4661c32934a9615a72e8fbfc732457"
   end
 
   depends_on "php"
