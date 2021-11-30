@@ -7,9 +7,10 @@ class PhpUopz < Formula
   head "https://github.com/krakjoe/uopz.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz-7.1.0"
-    sha256 cellar: :any_skip_relocation, catalina:     "24fa012657d9767ef3f06eceda4ef468962c84071fb8c5830f1229daf93f98ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a4c841db9ff87496be2dfe94c0f91b99523bbe350aae68025bcecb908391fcc7"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz-7.1.0_1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "c98adb88ea4850c187f2bd2e5e99a71eb09c2076209efee0e4c0f6439eac998f"
+    sha256 cellar: :any_skip_relocation, catalina:     "677a7d2dc8af80c67d95af5a00385582e574bd926b15512597ba7ab95f97b8ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "17683e00ed5bea71a934990cf42585ae10691300d842cd6c4d059c6b0a038aa7"
   end
 
   depends_on "autoconf" => :build
