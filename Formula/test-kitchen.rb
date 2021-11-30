@@ -1,8 +1,8 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/v3.2.0.tar.gz"
-  sha256 "e2ccffa8e30ff84559a52aa1f5dc62e64651e0768156e7538daa268cad93aef5"
+  url "https://github.com/test-kitchen/test-kitchen/archive/v3.2.1.tar.gz"
+  sha256 "10291a30ab7da5a0290075e04a6a9307ed64d6bf8e056f9108e9d9357803e150"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
   bottle do
