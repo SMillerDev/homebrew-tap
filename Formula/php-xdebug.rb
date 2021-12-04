@@ -1,9 +1,8 @@
 class PhpXdebug < Formula
   desc "XDebug Extension for PHP"
   homepage "https://xdebug.org"
-  url "https://xdebug.org/files/xdebug-3.1.1.tgz"
-  sha256 "9be3ae0fdb4dc4a4c68084626cddc56f12396487e309a8c8dd318f0f900d1a68"
-  revision 1
+  url "https://xdebug.org/files/xdebug-3.1.2.tgz"
+  sha256 "083f6be1100df79ccbdf049dafc3930bab35f0eb80f9b19ac1ad84fa6779ccf3"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
