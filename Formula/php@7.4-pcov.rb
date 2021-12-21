@@ -10,9 +10,10 @@ class PhpAT74Pcov < Formula
   end
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-pcov-1.0.10"
-    sha256 cellar: :any_skip_relocation, catalina:     "a55a54c0141de43d2fc0a64a9f58674a64c17996550e59251fcf6e354ed193b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "400efa4284cfa7b55e46b7768cfcd809fd95062c55bd6ec9942ff80a099b1f3d"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-pcov-1.0.11"
+    sha256 cellar: :any_skip_relocation, big_sur:      "cca55ca2f54e27b7c73952d54f779ad681bd04c5bf5be6724174ebc295e8aa3b"
+    sha256 cellar: :any_skip_relocation, catalina:     "22085c13ddbed314b71996fc6660cb998572183bc8e580af96e1f7c643fd7f12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f61e3b7c9721e55dfb3a16ff45eb4d45eb0fddace8d91ac883cc226fa4224f0d"
   end
 
   depends_on "php@7.4"
