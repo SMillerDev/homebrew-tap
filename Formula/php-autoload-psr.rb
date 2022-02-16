@@ -5,8 +5,6 @@ class PhpAutoloadPsr < Formula
   sha256 "9d4fa71854231851079ffc62ff30c2cda7c823f44e51d81b578db64065739af0"
   head "https://github.com/pprkut/autoload-psr.git"
 
-  # disable! date: "2021-03-01", because: "support pending"
-
   depends_on "autoconf" => :build
   depends_on "php"
 
