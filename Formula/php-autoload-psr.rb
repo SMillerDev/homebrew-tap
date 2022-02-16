@@ -1,12 +1,9 @@
 class PhpAutoloadPsr < Formula
   desc "Autoload-PSR Extension for PHP"
   homepage "https://github.com/pprkut/autoload-psr"
-  url "https://github.com/pprkut/autoload-psr/archive/0.1.2.tar.gz"
-  sha256 "edee4c0fb8d66238509e080697a868ad454444242ffb269cb52c6cceabd04c2c"
-  revision 1
+  url "https://github.com/pprkut/autoload-psr/archive/0.2.0.tar.gz"
+  sha256 "9d4fa71854231851079ffc62ff30c2cda7c823f44e51d81b578db64065739af0"
   head "https://github.com/pprkut/autoload-psr.git"
-
-  disable! date: "2021-03-01", because: "support pending"
 
   depends_on "autoconf" => :build
   depends_on "php"
