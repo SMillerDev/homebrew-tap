@@ -1,0 +1,10 @@
+{
+  "php-imagick": "shivammathur/extensions/imagick@8.1",
+  "php@7.4-imagick": "shivammathur/extensions/imagick@7.4",
+  "php-ssh2": "shivammathur/extensions/ssh2@8.1",
+  "php@7.4-ssh2": "shivammathur/extensions/ssh2@7.4",
+  "php-xdebug": "shivammathur/extensions/xdebug@8.1",
+  "php@7.4-xdebug": "shivammathur/extensions/xdebug@7.4",
+  "php-pcov": "shivammathur/extensions/pcov@8.1",
+  "php@7.4-pcov": "shivammathur/extensions/pcov@7.4"
+}
