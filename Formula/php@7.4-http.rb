@@ -11,9 +11,9 @@ class PhpAT74Http < Formula
   end
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-http-3.2.4"
-    sha256                               catalina:     "d30440ee0a32efb1ed4d1603bbe4370546e128c3121671fd6bf90b29e5b6bf9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7615bec56dac5d721e424e2a8e8ba0c63b8322edac2efc4905b45f3f4a344b94"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php@7.4-http-3.2.4_1"
+    sha256 cellar: :any,                 catalina:     "0bed68eb4aa70f99ff740a5faf019de3f02a7631c4dbbae1a5875979b87cc5dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1be0b991e4464467804821618a0f21bb441f766d17d0b3bde531a389cf1c083e"
   end
 
   depends_on "autoconf" => :build
