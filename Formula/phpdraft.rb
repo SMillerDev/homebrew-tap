@@ -30,6 +30,6 @@ class Phpdraft < Formula
       [App.net API](http://developers.app.net).
 
     EOS
-    assert_match "<title>Real World API<\/title>", shell_output("#{bin}/phpdraft --file index.apib")
+    assert_match "<title>Real World API</title>", shell_output("#{bin}/phpdraft --file index.apib")
   end
 end

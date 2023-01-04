@@ -47,7 +47,7 @@ class PhpAT74Propro < Formula
     else
       ext_config_path.write <<~EOS
         [propro]
-        extension=\"#{opt_lib/module_path}/propro.so\"
+        extension="#{opt_lib/module_path}/propro.so"
       EOS
     end
   end

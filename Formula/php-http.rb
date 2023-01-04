@@ -57,7 +57,7 @@ class PhpHttp < Formula
     else
       ext_config_path.write <<~EOS
         [pecl_http]
-        extension=\"#{opt_lib/module_path}/http.so\"
+        extension="#{opt_lib/module_path}/http.so"
       EOS
     end
   end

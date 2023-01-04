@@ -40,7 +40,7 @@ class PhpAT74AutoloadPsr < Formula
     else
       ext_config_path.write <<~EOS
         [autoload_psr]
-        extension=\"#{opt_lib/module_path}/autoload_psr.so\"
+        extension="#{opt_lib/module_path}/autoload_psr.so"
       EOS
     end
   end

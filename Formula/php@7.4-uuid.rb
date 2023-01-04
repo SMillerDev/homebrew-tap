@@ -54,7 +54,7 @@ class PhpAT74Uuid < Formula
     else
       ext_config_path.write <<~EOS
         [uuid]
-        extension=\"#{opt_lib/module_path}/uuid.so\"
+        extension="#{opt_lib/module_path}/uuid.so"
       EOS
     end
   end

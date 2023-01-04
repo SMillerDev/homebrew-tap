@@ -45,7 +45,7 @@ class PhpRaphf < Formula
     else
       ext_config_path.write <<~EOS
         [raphf]
-        extension=\"#{opt_lib/module_path}/raphf.so\"
+        extension="#{opt_lib/module_path}/raphf.so"
       EOS
     end
   end

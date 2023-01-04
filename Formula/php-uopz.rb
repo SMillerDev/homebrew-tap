@@ -41,7 +41,7 @@ class PhpUopz < Formula
     else
       ext_config_path.write <<~EOS
         [uopz]
-        extension=\"#{opt_lib/module_path}/uopz.so\"
+        extension="#{opt_lib/module_path}/uopz.so"
       EOS
     end
   end
