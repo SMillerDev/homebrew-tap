@@ -1,8 +1,8 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://github.com/m6w6/ext-http"
-  url "https://pecl.php.net/get/pecl_http-4.2.3.tgz"
-  sha256 "fa2ab558fc8f0928a10f35c0f566f7c4a1d32e727bd3a96579e4c28482ee9d6a"
+  url "https://pecl.php.net/get/pecl_http-4.2.4.tgz"
+  sha256 "fb1e10c2e5edfb011ff8dc2e473cdbd2bbe0127d1279dfce4d98570555ac6ded"
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
@@ -32,17 +32,20 @@ class PhpHttp < Formula
     # link in the raphf extension header
     cp_r "#{Formula["php-raphf"].include}/raphf", "ext/raphf"
 
+    sdkpath = ""
+    sdkpath = MacOS.sdk_path_if_needed if OS.mac?
+
     configure_args = %W[
       --with-http
       --without-http-libidn-dir
       --without-http-libidn2-dir
       --without-http-libidnkit-dir
       --without-http-libidnkit2-dir
-      --with-libdir=/usr/local/lib
+      --with-libdir=#{HOMEBREW_PREFIX}/lib
       --with-php-config=#{Formula["php"].opt_bin/"php-config"}
-      --with-http-zlib-dir=#{MacOS.sdk_path_if_needed}/usr
+      --with-http-zlib-dir=#{sdkpath}/usr
       --with-http-libcurl-dir=#{Formula["curl"].opt_lib}
-      --with-http-libicu-dir=#{MacOS.sdk_path_if_needed}/usr
+      --with-http-libicu-dir=#{sdkpath}/usr
     ]
     system "./configure", *configure_args
     system "make"
