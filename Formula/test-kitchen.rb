@@ -1,8 +1,8 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/refs/tags/v3.5.0.tar.gz"
-  sha256 "c8e01689535afed2177dc0f3fdca8c2aa1a8b9150936221827f3906c3e4fdc5f"
+  url "https://github.com/test-kitchen/test-kitchen/archive/refs/tags/v3.5.1.tar.gz"
+  sha256 "a65e5a3c9344f88f8b7cb0a4896e8590e3c4af69b1babcc7ae7a0e51c2ab4491"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
   bottle do
@@ -13,7 +13,7 @@ class TestKitchen < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "ruby@2.7"
+  depends_on "ruby@3.1"
 
   uses_from_macos "libffi", since: :catalina
 
