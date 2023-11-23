@@ -1,9 +1,9 @@
 class Decomposer < Formula
   desc "Library manager for PHP projects"
-  homepage "https://github.com/M2mobi/decomposer"
-  url "https://github.com/M2mobi/decomposer/archive/1.0.0.tar.gz"
+  homepage "https://github.com/move-backend/decomposer"
+  url "https://github.com/move-backend/decomposer/archive/refs/tags/1.0.0.tar.gz"
   sha256 "b52f3b23645ca0872cacf80e564ecc987188a623136762d6fc161334c0c63ad8"
-  head "https://github.com/M2mobi/decomposer.git"
+  head "https://github.com/move-backend/decomposer.git"
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/decomposer-1.0.0"
