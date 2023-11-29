@@ -1,8 +1,8 @@
 class TestKitchen < Formula
   desc "Tool for developing and testing infrastructure code"
   homepage "https://kitchen.ci"
-  url "https://github.com/test-kitchen/test-kitchen/archive/refs/tags/v3.5.0.tar.gz"
-  sha256 "c8e01689535afed2177dc0f3fdca8c2aa1a8b9150936221827f3906c3e4fdc5f"
+  url "https://github.com/test-kitchen/test-kitchen/archive/refs/tags/v3.6.0.tar.gz"
+  sha256 "220766c3c51745dd72e3f3c3cd8c108ab05e00d792692976acef958726c72c51"
   head "https://github.com/test-kitchen/test-kitchen.git"
 
   bottle do
@@ -13,7 +13,7 @@ class TestKitchen < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "ruby@2.7"
+  depends_on "ruby@3.1"
 
   uses_from_macos "libffi", since: :catalina
 
@@ -25,10 +25,12 @@ class TestKitchen < Formula
     ENV.prepend_path "PATH", buildpath/"gem_home/bin"
     system "bundle", "install", "--jobs=#{ENV.make_jobs}"
 
+    system "gem", "install", "rexml", "--norc", "--no-document"
     system "gem", "install", "kitchen-inspec", "--norc", "--no-document"
     system "gem", "install", "kitchen-salt", "--norc", "--no-document"
     system "gem", "install", "kitchen-vagrant", "--norc", "--no-document"
     system "gem", "install", "kitchen-docker", "--norc", "--no-document"
+    system "gem", "install", "kitchen-dokken", "--norc", "--no-document"
 
     if OS.mac?
       ext_path = "extensions/#{Hardware::CPU.arch}-darwin-*/*/ffi-*/mkmf.log"
