@@ -12,7 +12,7 @@ class TestKitchen < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "ruby@3.1"
+  depends_on "ruby"
 
   uses_from_macos "libffi", since: :catalina
 
