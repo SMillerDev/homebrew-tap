@@ -7,8 +7,10 @@ class TestKitchen < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/test-kitchen-3.6.0"
-    sha256 cellar: :any,                 ventura:      "27794f41797a6f0dc36589f45aacfca526a7ed9687d4241033d5633c7ea31d17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "83731ff44e6188c0435285a852c2c27bffb7cc17fdc139e1e5aab1bcd9b7e410"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma: "b62cb1ba0b5fde9f48eb089a98008bf41f4835357686fb09fae38826b4a0653e"
+    sha256 cellar: :any,                 ventura:      "1fec42c377ea65c8978bcc76ef8ffb31ef9ba0aded11ddba7eb0028c2f0c8eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "13e6925e04f5c4a27e4f992065d2bade092eba31c44d8cd68121b474c92d1d8f"
   end
 
   depends_on "pkg-config" => :build
