@@ -13,7 +13,7 @@ class Firefox < Formula
   uses_from_macos "curl" => :build
 
   def install
-    system "python3", "bootstrap.py", "--vcs=git", "--no-interactive"
+    system "python3", "bootstrap.py", "--no-interactive"
     system "hg", "up", "-C", "central"
     system "./mach", "build"
   end
