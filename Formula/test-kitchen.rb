@@ -35,7 +35,7 @@ class TestKitchen < Formula
 
     if OS.mac?
       ext_path = "extensions/#{Hardware::CPU.arch}-darwin-*/*/ffi-*/mkmf.log"
-      rm_f Dir[libexec/ext_path.to_s, libexec/"ruby/*/#{ext_path}"]
+      rm_r Dir[libexec/ext_path.to_s, libexec/"ruby/*/#{ext_path}"]
     end
 
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
