@@ -6,9 +6,10 @@ class Phpdraft < Formula
   head "https://github.com/SMillerDev/phpdraft.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpdraft-2.5.2"
-    sha256 cellar: :any_skip_relocation, ventura:      "c382213c39f3bcccdd88225675a13b5b0b23a6531a3164a91322735d3b002080"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d3e252c733003853c7929c2b67299b8967526f5053337caefccbb03294bd1da2"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpdraft-2.6.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "c504ee714e6cb923cf9dbb158e195c92e3bf3cae22fa1c0d6fa2fb0e1d4663a2"
+    sha256 cellar: :any_skip_relocation, ventura:      "5e09537c0acb9f5df8b934c0d81924a11b913d5122a3ccf4aad6e3b94f979b47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4606c14af9847e6b190ca65739f48eca98153e5af418c927c7eb77325db639fd"
   end
 
   depends_on "php" => :test
