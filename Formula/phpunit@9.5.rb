@@ -9,6 +9,13 @@ class PhpunitAT95 < Formula
     skip "static version"
   end
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpunit@9.5-9.5.28"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "587bb4a22c6100aaf0c8149f20cb0dbfd9e1957a87c32b708cb080dbfe2426a2"
+    sha256 cellar: :any_skip_relocation, ventura:      "a506b7e2a665662b8165378e98976e5ab4cbc97b2c0e556060995bb513981ce1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6a85e6e7f58e4d7e995b16e29291ee24e8017482cc5164b3fe834d1b58770fa8"
+  end
+
   depends_on "php" => :test
 
   def install
