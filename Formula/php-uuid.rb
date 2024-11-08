@@ -1,19 +1,9 @@
 class PhpUuid < Formula
   desc "UUID Extension for PHP"
   homepage "https://pecl.php.net/uuid"
+  url "https://pecl.php.net/get/uuid-1.2.1.tgz"
+  sha256 "2235c8584ca8911ce5512ebf791e5bb1d849c323640ad3e0be507b00156481c7"
   head "https://github.com/php/pecl-networking-uuid.git"
-
-  stable do
-    url "https://pecl.php.net/get/uuid-1.2.0.tgz"
-    sha256 "5cb834d32fa7d270494aa47fd96e062ef819df59d247788562695fd1f4e470a4"
-    patch do
-      # let's fix the path to uuid.h (uuid/uuid.h on linux, ossp/uuid.h on OSX)
-      # uuid_mac & uuid_time might not be available on OSX, let's add test to avoid compiling issue on these functions
-      url "https://github.com/php/pecl-networking-uuid/commit/a393861918b75d9657cb8125a4e17cebd2432c4a.patch?full_index=1"
-      sha256 "f72c5bd71d4c320a3bf7922104bbce959b574b79e3d504e35bccb154054f0f66"
-      directory "uuid-1.2.0"
-    end
-  end
 
   depends_on "autoconf" => :build
   depends_on "php"
