@@ -5,6 +5,13 @@ class PhpUuid < Formula
   sha256 "2235c8584ca8911ce5512ebf791e5bb1d849c323640ad3e0be507b00156481c7"
   head "https://github.com/php/pecl-networking-uuid.git"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uuid-1.2.1"
+    sha256 cellar: :any,                 arm64_sonoma: "452e3a14218f98af13894f7565ce5a7713f369f354f30f66fa4b9b030dea4777"
+    sha256 cellar: :any,                 ventura:      "f536ba295c7e506ebf0abd14a24c0a1ccd19628d82a217762e506aff639a23f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6af67a2e4f9de3f10331d82299e1d8870a7218b158e9a3f255062c12de91b90e"
+  end
+
   depends_on "autoconf" => :build
   depends_on "php"
   depends_on "util-linux"
