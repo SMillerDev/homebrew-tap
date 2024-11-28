@@ -3,6 +3,7 @@ class PhpHttp < Formula
   homepage "https://github.com/m6w6/ext-http"
   url "https://pecl.php.net/get/pecl_http-4.2.6.tgz"
   sha256 "cd33230050b3f7c5ddb6f4383ce2a81f0bcdb934432029eec72ebf0f942b876d"
+  revision 1
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
