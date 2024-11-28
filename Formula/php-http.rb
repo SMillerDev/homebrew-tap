@@ -1,8 +1,8 @@
 class PhpHttp < Formula
   desc "Pecl HTTP Extension for PHP"
   homepage "https://github.com/m6w6/ext-http"
-  url "https://pecl.php.net/get/pecl_http-4.2.4.tgz"
-  sha256 "fb1e10c2e5edfb011ff8dc2e473cdbd2bbe0127d1279dfce4d98570555ac6ded"
+  url "https://pecl.php.net/get/pecl_http-4.2.6.tgz"
+  sha256 "cd33230050b3f7c5ddb6f4383ce2a81f0bcdb934432029eec72ebf0f942b876d"
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
@@ -14,9 +14,14 @@ class PhpHttp < Formula
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
+  depends_on "brotli"
   depends_on "curl"
+  depends_on "icu4c@76"
+  depends_on "openssl@3"
   depends_on "php"
   depends_on "php-raphf"
+
+  uses_from_macos "zlib"
 
   def module_path
     extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin}/php-config", "--extension-dir").chomp
