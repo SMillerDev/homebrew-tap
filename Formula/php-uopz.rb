@@ -3,7 +3,14 @@ class PhpUopz < Formula
   homepage "https://pecl.php.net/uopz"
   url "https://pecl.php.net/get/uopz-7.1.1.tgz"
   sha256 "50fa50a5340c76fe3495727637937eaf05cfe20bf93af19400ebf5e9d052ece3"
-  head "https://github.com/krakjoe/uopz.git"
+  head do
+    url "https://github.com/krakjoe/uopz.git"
+    patch do
+      url "https://patch-diff.githubusercontent.com/raw/krakjoe/uopz/pull/185.patch"
+      sha256 "d93be7eb2495a35807a2f4468542d3d4295df5521159964a56b11b4a49418f9e"
+    end
+  end
+
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz-7.1.1"
