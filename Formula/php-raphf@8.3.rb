@@ -5,6 +5,13 @@ class PhpRaphfAT83 < Formula
   sha256 "da3566db17422e5ef08b7ff144162952aabc14cb22407cc6b1d2a2d095812bd0"
   head "https://github.com/m6w6/ext-raphf.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-raphf@8.3-2.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "889411b2aade2ce812a9fc184d2eea4b0e1dc60283c4ce11782072bef3a83bb4"
+    sha256 cellar: :any_skip_relocation, ventura:      "abf6d13afba8b1900f32e37c3b3e7764a32c57829d340a3444e0d400935018ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "be5361c9fa275e835e66bff48b38effdf05df60226f6de365cb4f22393a01ae8"
+  end
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@8.3"
