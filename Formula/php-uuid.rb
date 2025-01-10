@@ -12,6 +12,9 @@ class PhpUuid < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "6af67a2e4f9de3f10331d82299e1d8870a7218b158e9a3f255062c12de91b90e"
   end
 
+  disable! date: "2025-01-01", because: "has been replaced by shivammathur/extensions/uuid@8.4",
+replacement: "shivammathur/extensions/uuid@8.4"
+
   depends_on "autoconf" => :build
   depends_on "php"
   depends_on "util-linux"
