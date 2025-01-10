@@ -6,10 +6,10 @@ class PhpUopzAT83 < Formula
   head "https://github.com/krakjoe/uopz.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz-7.1.1"
-    sha256 cellar: :any_skip_relocation, big_sur:      "3f5482506c3d7936256aac25e8e09e3bba922f9f1465a69753b9b5409ecaacda"
-    sha256 cellar: :any_skip_relocation, catalina:     "d7abad1fc95b91147c63cce9b94bbb907d503b044cae0dbf77e5245bbb298a27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "708f8e8fe776f1031fb1bda84bdb91fda85056d61c829a939baf7131c0f7a8f8"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz@8.3-7.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2621a59be55059f1a7db15152a7db7ef378bd0238d3969c31cf9ce513feae2cc"
+    sha256 cellar: :any_skip_relocation, ventura:      "ea1c1eedca1de0d9f71faee07681c26f73c45a536546642265830a60e6ac2d60"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "41694fc3aba0a69c10d824f4a9a6eee023b020fcba2440ecf4c399630f90e5a4"
   end
 
   depends_on "autoconf" => :build
