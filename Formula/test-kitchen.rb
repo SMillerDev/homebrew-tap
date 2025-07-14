@@ -44,8 +44,8 @@ class TestKitchen < Formula
 
   test do
     system "#{bin}/kitchen", "init"
-    assert_predicate testpath/"kitchen.yml", :exist?
-    assert_predicate testpath/"chefignore", :exist?
-    assert_predicate testpath/"test/integration/default", :exist?
+    assert_path_exists testpath/"kitchen.yml"
+    assert_path_exists testpath/"chefignore"
+    assert_path_exists testpath/"test/integration/default"
   end
 end
