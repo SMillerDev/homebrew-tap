@@ -33,7 +33,7 @@ class Phing < Formula
       Hello World
     EOS
     system "#{bin}/phing", "move"
-    assert_predicate testpath/"myfile.txt", :exist?
-    assert_predicate testpath/"build/mycopy.txt", :exist?
+    assert_path_exists testpath/"myfile.txt"
+    assert_path_exists testpath/"build/mycopy.txt"
   end
 end
