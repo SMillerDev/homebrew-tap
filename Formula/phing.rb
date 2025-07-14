@@ -1,8 +1,8 @@
 class Phing < Formula
   desc "Not GNU make"
   homepage "https://www.phing.info"
-  url "https://www.phing.info/get/phing-2.17.0.phar"
-  sha256 "1703462b5c3ab7841c760cbae6a4a7f3cfda2acd715fd34b663ab13f2ac96546"
+  url "https://www.phing.info/get/phing-3.0.0.phar"
+  sha256 "00306c4024295943a619260a41f1acf926ce220daac960bd1a52f4e83f3f9ddf"
   head "https://github.com/phingofficial/phing.git"
 
   bottle do
