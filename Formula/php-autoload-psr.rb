@@ -6,10 +6,10 @@ class PhpAutoloadPsr < Formula
   head "https://github.com/pprkut/autoload-psr.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-autoload-psr-0.2.0"
-    sha256 cellar: :any_skip_relocation, big_sur:      "49e809e50382e3511d8ca6619d28d417cf7a6addbf47decc038151d35ebc96ee"
-    sha256 cellar: :any_skip_relocation, catalina:     "9315aaf92f7c9e47f56b58e09ab519cd68c9f26e5db8ea58de2bd6f9a26978c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0ffe1c7d6065aa5088d009c9db751cc0c1fbdd9585a23e8882e9d6c1218db467"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-autoload-psr-0.2.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5d88beac3c904d4414c8d277edd3a37495cc36fdef13edd8effc210ca17a3dd5"
+    sha256 cellar: :any_skip_relocation, ventura:       "02dcbc1eaee4fdf5299d1e763cdbed2aaa1fb555a64558e13234cebb7add94ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "93911107ca444a541e429364c206f1e03033caeaef025510865ad5d249a08a0f"
   end
 
   depends_on "autoconf" => :build
