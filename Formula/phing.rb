@@ -6,9 +6,10 @@ class Phing < Formula
   head "https://github.com/phingofficial/phing.git"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phing-2.17.0"
-    sha256 cellar: :any_skip_relocation, catalina:     "4cf6f16d64a12ac6e19ca580a0b0687ebf4fe16e6045a3f3e7c5c5e13d99daf1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c134c51d43e0b70d040025d473d07d166249a199f73e66eeee3ff87c19a07689"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phing-3.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cb837412c6a46e33423c8b3461e80ee795964be8da824913c74cf6507361c663"
+    sha256 cellar: :any_skip_relocation, ventura:       "835711608e2618ab5c3a281d91415e9bc446e7568d5c16b3e77deedb0cb387db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "56734f63555dee408cfbea4b1399ea69b7440acb8a5d9b7b885855c83375eecc"
   end
 
   depends_on "php" => :test
