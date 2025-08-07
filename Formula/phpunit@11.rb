@@ -10,6 +10,13 @@ class PhpunitAT11 < Formula
     regex(%r{/phpunit[._-]v?(11\.\d+(?:\.\d+)+)\.phar}i)
   end
 
+  bottle do
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpunit@11-11.5.28"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "091cd13964211557e6bf1193806ad10ed47f3e2376034e4edd0e1cfa2461e8bc"
+    sha256 cellar: :any_skip_relocation, ventura:       "358dac9627fb16023ac991eae78ad4260ce42a8ed9cdd544c98fd1c36afe47d1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75a760b0b147302797ade3869e08784a13181a2b9754cc27745d73d3153a5f2a"
+  end
+
   depends_on "php" => :test
 
   def install
