@@ -1,12 +1,13 @@
-class PhpunitAT95 < Formula
+class PhpunitAT9 < Formula
   desc "Programmer-oriented testing framework for PHP"
   homepage "https://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-9.5.28.phar"
-  sha256 "d8b2b96468c0b66ceeb2c345ed14925248089fe76cb76c7b591ab99aa04d319a"
+  url "https://phar.phpunit.de/phpunit-9.6.23.phar"
+  sha256 "f195cd37de1bd14b4b60aa90af5bea95e8506d828c0dbbcf8dca03d78a38e79f"
   license "BSD-3-Clause"
 
   livecheck do
-    skip "static version"
+    url "https://phar.phpunit.de/"
+    regex(%r{/phpunit[._-]v?(9\.\d+(?:\.\d+)+)\.phar}i)
   end
 
   bottle do
@@ -19,7 +20,9 @@ class PhpunitAT95 < Formula
   depends_on "php" => :test
 
   def install
-    bin.install "phpunit-#{version}.phar" => "phpunit"
+    bin.install "phpunit-#{version}.phar" => "phpunit-#{version.major}"
+    # Create a symlink to retain for compatibility with previous versions
+    bin.install_symlink "phpunit-#{version.major}" => "phpunit"
   end
 
   test do
@@ -116,6 +119,6 @@ class PhpunitAT95 < Formula
 
     EOS
     assert_match(/^OK \(3 tests, 3 assertions\)$/,
-      shell_output("#{bin}/phpunit --bootstrap src/autoload.php tests/EmailTest.php"))
+      shell_output("#{bin}/phpunit-#{version.major} --bootstrap src/autoload.php tests/EmailTest.php"))
   end
 end
