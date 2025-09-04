@@ -29,7 +29,7 @@ class PhpAutoloadPsr < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"ext-autoload_psr.ini"
+    ext_config_path = etc/"php/#{Formula["php"].version.major_minor}/conf.d/ext-autoload_psr.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/autoload_psr.so\""
