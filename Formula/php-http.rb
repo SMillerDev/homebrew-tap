@@ -59,7 +59,7 @@ class PhpHttp < Formula
   end
 
   def post_install
-    ext_config_path = etc/"php"/Formula["php"].version.major_minor/"conf.d"/"20-ext-http.ini"
+    ext_config_path = etc/"php/#{Formula["php"].version.major_minor}/conf.d/20-ext-http.ini"
     if ext_config_path.exist?
       inreplace ext_config_path,
         /extension=.*$/, "extension=\"#{opt_lib/module_path}/http.so\""
