@@ -13,7 +13,7 @@ class Decomposer < Formula
 
   depends_on "scdoc" => :build
   depends_on "coreutils"
-  depends_on "jq"
+  uses_from_macos "jq", since: :sequoia
 
   def install
     system "make", "doc"
