@@ -18,7 +18,7 @@ class PhpRaphf < Formula
   depends_on "php"
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin}/php-config", "--extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{formula_opt_bin("php")}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
@@ -27,7 +27,7 @@ class PhpRaphf < Formula
     cd "raphf-#{version}"
     system Formula["php"].bin/"phpize"
     configure_args = %W[
-      --with-php-config=#{Formula["php"].opt_bin/"php-config"}
+      --with-php-config=#{formula_opt_bin("php")/"php-config"}
     ]
     system "./configure", *configure_args
     system "make"
@@ -51,7 +51,7 @@ class PhpRaphf < Formula
   end
 
   test do
-    assert_match "raphf", shell_output("#{Formula["php"].opt_bin}/php -m").downcase,
+    assert_match "raphf", shell_output("#{formula_opt_bin("php")}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
