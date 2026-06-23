@@ -7,9 +7,10 @@ class PhpRaphfAT83 < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-raphf@8.3-2.0.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "889411b2aade2ce812a9fc184d2eea4b0e1dc60283c4ce11782072bef3a83bb4"
-    sha256 cellar: :any_skip_relocation, ventura:      "abf6d13afba8b1900f32e37c3b3e7764a32c57829d340a3444e0d400935018ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "be5361c9fa275e835e66bff48b38effdf05df60226f6de365cb4f22393a01ae8"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "6e1751f1c4e3741b16ba4001cd83fa6b3677fdfe3593babf910e46e8fd39725c"
+    sha256 cellar: :any,                 arm64_linux:  "a41219392f475a8828f92795b24a4b2ce177bf65aa0912c6f94564ad90f3f903"
+    sha256 cellar: :any,                 x86_64_linux: "d222263935a6571cd57ba3f5107bdb63ff540e69da31f38b291da69af8f98e61"
   end
 
   depends_on "autoconf" => :build
