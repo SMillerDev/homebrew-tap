@@ -20,7 +20,7 @@ replacement: "shivammathur/extensions/uuid@8.4"
   depends_on "util-linux"
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin}/php-config", "--extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{formula_opt_bin("php")}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
@@ -29,8 +29,8 @@ replacement: "shivammathur/extensions/uuid@8.4"
     chdir "uuid-#{version}" if build.stable?
     system Formula["php"].bin/"phpize"
     configure_args = %W[
-      --with-php-config=#{Formula["php"].opt_bin/"php-config"}
-      --with-uuid=#{Formula["util-linux"].opt_prefix}
+      --with-php-config=#{formula_opt_bin("php")/"php-config"}
+      --with-uuid=#{formula_opt_prefix("util-linux")}
     ]
     system "./configure", *configure_args
     system "make"
@@ -51,7 +51,7 @@ replacement: "shivammathur/extensions/uuid@8.4"
   end
 
   test do
-    assert_match "uuid", shell_output("#{Formula["php"].opt_bin}/php -m").downcase,
+    assert_match "uuid", shell_output("#{formula_opt_bin("php")}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
