@@ -22,10 +22,12 @@ class PhpHttp < Formula
   depends_on "php"
   depends_on "php-raphf"
 
-  uses_from_macos "zlib"
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin}/php-config", "--extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{formula_opt_bin("php")}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
@@ -48,9 +50,9 @@ class PhpHttp < Formula
       --without-http-libidnkit-dir
       --without-http-libidnkit2-dir
       --with-libdir=#{HOMEBREW_PREFIX}/lib
-      --with-php-config=#{Formula["php"].opt_bin/"php-config"}
+      --with-php-config=#{formula_opt_bin("php")/"php-config"}
       --with-http-zlib-dir=#{sdkpath}/usr
-      --with-http-libcurl-dir=#{Formula["curl"].opt_lib}
+      --with-http-libcurl-dir=#{formula_opt_lib("curl")}
       --with-http-libicu-dir=#{sdkpath}/usr
     ]
     system "./configure", *configure_args
@@ -72,7 +74,7 @@ class PhpHttp < Formula
   end
 
   test do
-    assert_match "http", shell_output("#{Formula["php"].opt_bin}/php -m").downcase,
+    assert_match "http", shell_output("#{formula_opt_bin("php")}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
