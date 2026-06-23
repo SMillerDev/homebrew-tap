@@ -7,9 +7,10 @@ class PhpUopzAT83 < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-uopz@8.3-7.1.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2621a59be55059f1a7db15152a7db7ef378bd0238d3969c31cf9ce513feae2cc"
-    sha256 cellar: :any_skip_relocation, ventura:      "ea1c1eedca1de0d9f71faee07681c26f73c45a536546642265830a60e6ac2d60"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "41694fc3aba0a69c10d824f4a9a6eee023b020fcba2440ecf4c399630f90e5a4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "7f45f51cdf8b8380ffa54a1a1db2374bfbe87dd1d7e0f2420428e6284c562d85"
+    sha256 cellar: :any,                 arm64_linux:  "1643740bbdfdb714b922b5456b886705d8a50511dba16d293ab3fc64d042648d"
+    sha256 cellar: :any,                 x86_64_linux: "ecb0ac6968d36c06e46d4b709f339ee5d189cf6ad8d7b617402f74780fb37150"
   end
 
   depends_on "autoconf" => :build
