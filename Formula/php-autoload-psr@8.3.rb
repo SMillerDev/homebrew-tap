@@ -16,14 +16,14 @@ class PhpAutoloadPsrAT83 < Formula
   depends_on "php@8.3"
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php@8.3"].opt_bin}/php-config", "--extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{formula_opt_bin("php@8.3")}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
 
   def install
     system Formula["php@8.3"].bin/"phpize"
-    system "./configure", "--with-php-config=#{Formula["php@8.3"].opt_bin/"php-config"}"
+    system "./configure", "--with-php-config=#{formula_opt_bin("php@8.3")/"php-config"}"
     system "make"
     (lib/module_path).install "modules/autoload_psr.so"
   end
@@ -42,7 +42,7 @@ class PhpAutoloadPsrAT83 < Formula
   end
 
   test do
-    assert_match "autoload_psr", shell_output("#{Formula["php@8.3"].opt_bin}/php -m").downcase,
+    assert_match "autoload_psr", shell_output("#{formula_opt_bin("php@8.3")}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
