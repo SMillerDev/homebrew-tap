@@ -16,14 +16,14 @@ class PhpAutoloadPsr < Formula
   depends_on "php"
 
   def module_path
-    extension_dir = Utils.safe_popen_read("#{Formula["php"].opt_bin}/php-config", "--extension-dir").chomp
+    extension_dir = Utils.safe_popen_read("#{formula_opt_bin("php")}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     "php/#{php_basename}"
   end
 
   def install
     system Formula["php"].bin/"phpize"
-    system "./configure", "--with-php-config=#{Formula["php"].opt_bin/"php-config"}"
+    system "./configure", "--with-php-config=#{formula_opt_bin("php")/"php-config"}"
     system "make"
     (lib/module_path).install "modules/autoload_psr.so"
   end
@@ -42,7 +42,7 @@ class PhpAutoloadPsr < Formula
   end
 
   test do
-    assert_match "autoload_psr", shell_output("#{Formula["php"].opt_bin}/php -m").downcase,
+    assert_match "autoload_psr", shell_output("#{formula_opt_bin("php")}/php -m").downcase,
       "failed to find extension in php -m output"
   end
 end
