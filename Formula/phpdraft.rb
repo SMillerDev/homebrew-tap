@@ -6,10 +6,10 @@ class Phpdraft < Formula
   head "https://github.com/SMillerDev/phpdraft.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpdraft-2.6.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "c504ee714e6cb923cf9dbb158e195c92e3bf3cae22fa1c0d6fa2fb0e1d4663a2"
-    sha256 cellar: :any_skip_relocation, ventura:      "5e09537c0acb9f5df8b934c0d81924a11b913d5122a3ccf4aad6e3b94f979b47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4606c14af9847e6b190ca65739f48eca98153e5af418c927c7eb77325db639fd"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpdraft-2.6.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "8037762ec27694dddff90fbd1e0b8808fc1a74d297ee5398d14b3c193a9b909c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "ab5f430024f5343c0b940f867ceb90245219cb3f50d6b4a3a4bad0aca2c705a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9bd4a9fa3162293d6cb15cab29efddb43ff48db31fe5ec97e57aae107c6d4464"
   end
 
   deprecate! date: "2026-07-01", because: :repo_archived
