@@ -6,10 +6,10 @@ class PhpHttp < Formula
   head "https://github.com/m6w6/ext-http.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-http-4.2.6_1"
-    rebuild 1
-    sha256 cellar: :any, arm64_linux:  "02a6df022b212c178f00226e32320ec6db44c5a0d6e2ce2f5841f182cf626550"
-    sha256 cellar: :any, x86_64_linux: "8b3afd0125a2eaaebd600e0389194c2a51041d292733c158b6d16bbc72daa790"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-http-4.3.1"
+    sha256 cellar: :any, arm64_tahoe:  "fb87e4eb4675550e840349c3bcf68aec5fcd3a20605edfcb58b1d243ab715dc6"
+    sha256 cellar: :any, arm64_linux:  "a74ab646a023143e8a87c0f7546b3e4596baccf628a0429ba779b8afca946822"
+    sha256 cellar: :any, x86_64_linux: "f740a0a874b7a140fb5401d4c57c62daac00d8842bf372bd1eb15273061b592e"
   end
 
   depends_on "autoconf" => :build
