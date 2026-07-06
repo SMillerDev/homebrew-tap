@@ -56,5 +56,5 @@ jobs:
           if [[ -n "${FORMULAE-}" ]]; then
             xargs -t "${BREW_BUMP[@]}" <<<"${FORMULAE}"
           else
-            "${BREW_BUMP[@]}" --auto --tap=SMillerDev/tap
+            "${BREW_BUMP[@]}" --tap=SMillerDev/tap
           fi
