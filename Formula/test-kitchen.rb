@@ -13,8 +13,12 @@ class TestKitchen < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "13e6925e04f5c4a27e4f992065d2bade092eba31c44d8cd68121b474c92d1d8f"
   end
 
+  disable! date: "2026-07-01", because: :unsupported
+
   depends_on "pkg-config" => :build
   depends_on "ruby"
+
+  # too much effort to maintain
 
   uses_from_macos "libffi", since: :catalina
 
