@@ -1,9 +1,9 @@
 class Phing < Formula
   desc "Not GNU make"
   homepage "https://www.phing.info"
-  url "https://www.phing.info/get/phing-3.0.0.phar"
-  sha256 "00306c4024295943a619260a41f1acf926ce220daac960bd1a52f4e83f3f9ddf"
-  head "https://github.com/phingofficial/phing.git"
+  url "https://www.phing.info/get/phing-3.1.2.phar"
+  sha256 "75d1e6908dadcd8ed04d1612ce8422ad3b5c69e40cb61299b59e568d90660e44"
+  head "https://github.com/phingofficial/phing.git", branch: "main"
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phing-3.0.0"
