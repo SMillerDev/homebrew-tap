@@ -13,8 +13,8 @@ on:
         description: Custom list of formulae to livecheck and bump if outdated
         required: false
   schedule:
-    # Every 3 hours from 1 through 23 with an offset of 45 minutes
-    - cron: "45 1-23/3 * * *"
+    # Every day at 01:45 UTC
+    - cron: "45 1 * * *"
 
 permissions: {}
 
@@ -25,6 +25,8 @@ defaults:
 jobs:
   autobump:
     if: github.repository_owner == 'SMillerDev'
+    env:
+      TAP_NAME: SMillerDev/tap
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -39,22 +41,23 @@ jobs:
           core: false
           cask: false
 
-      - run: brew tap SMillerDev/tap
+      - run: brew tap "$TAP_NAME"
 
       - name: Configure Git user
+        id: git
         uses: Homebrew/actions/git-user-config@main
 
       - name: Bump formulae
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HOMEBREW_GIT_COMMITTER_NAME: github-actions
-          HOMEBREW_GIT_COMMITTER_EMAIL: 1484494+SMillerDev@users.noreply.github.com
+          HOMEBREW_GIT_COMMITTER_NAME: ${{ steps.git.outputs.name }}
+          HOMEBREW_GIT_COMMITTER_EMAIL: ${{ steps.git.outputs.email }}
           FORMULAE: ${{ inputs.formulae }}
         run: |
           BREW_BUMP=(brew bump --no-fork --open-pr --formulae --bump-synced)
           if [[ -n "${FORMULAE-}" ]]; then
             xargs -t "${BREW_BUMP[@]}" <<<"${FORMULAE}"
           else
-            "${BREW_BUMP[@]}" --tap=SMillerDev/tap
+            "${BREW_BUMP[@]}" --tap="$TAP_NAME"
           fi
