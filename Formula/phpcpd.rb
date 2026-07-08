@@ -11,6 +11,9 @@ class Phpcpd < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "ccd7c16c11fcd5dfc736b81b0345ffb42dcc9e8925a4a01e8b5e4a555704e972"
   end
 
+  # too much effort to maintain
+  disable! date: "2026-07-01", because: :unsupported
+
   depends_on "php" => :test
 
   def install
