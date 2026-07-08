@@ -1,0 +1,9 @@
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        Homebrew/actions/*: ref-pin
+        "*": hash-pin
+  dangerous-triggers:
+    ignore:
+      - publish.yml
