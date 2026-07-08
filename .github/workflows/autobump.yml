@@ -16,9 +16,7 @@ on:
     # Every 3 hours from 1 through 23 with an offset of 45 minutes
     - cron: "45 1-23/3 * * *"
 
-permissions:
-  contents: read
-  pull-requests: write
+permissions: {}
 
 defaults:
   run:
@@ -28,6 +26,9 @@ jobs:
   autobump:
     if: github.repository_owner == 'SMillerDev'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     container:
       image: ghcr.io/homebrew/brew:main
     steps:
