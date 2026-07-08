@@ -11,11 +11,11 @@ class PhpunitAT10 < Formula
   end
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpunit@10-10.5.63"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "9421bad015a9650adcb88e034eaa61d0f898e6683cef8e7fa9ccb286958e236f"
-    sha256 cellar: :any_skip_relocation, tahoe:        "4916d37917632e2fc00d7a7adef6a8317591eee3da7ef0348e2d8f7bb811c01a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "6241e0fb07cd3c69e3d1db309a98dbec5fab29be2729c0825df1a806c2ea7740"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2b38ad1c012272d7e844573437a30029b75376a68cb8d40c8c7a6404ab25dccb"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/phpunit@10-10.5.64"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "585fa5a140d01e097e8436c2cd35cad38c0784e306a5e7fc0f01a7edae43866d"
+    sha256 cellar: :any_skip_relocation, tahoe:        "cf4c9c1276ef9f961d29cb1317b0039536ac0810f09a3c52d12d2b3b16520095"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "9f19006a6b7c940cc93cd880d4d259f2ee05978b9bac38f824e49187c3d34ddb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c565b49d5d4c44032d98021255a65ceae5a33e76ae4c7029fcde01015c71c73e"
   end
 
   depends_on "php" => :test
