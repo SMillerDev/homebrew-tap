@@ -1,10 +1,10 @@
-# SMillerDev/php-ext
-PHP extension formulae for the Homebrew package manager. These extensions are not a part of [Homebrew/core](https://github.com/Homebrew/homebrew-core/) because they are either not popular enough or have known stability problems.
+# SMillerDev/tap
+PHP extension formulae, and assorted knick-knacks for the Homebrew package manager.
 
-Other extensions that used to be available from, the now deprecated, [Homebrew/php](https://github.com/Homebrew/homebrew-php/) should be installed through [PECL](https://pecl.php.net/).
+Other extensions are probably available through: <https://github.com/shivammathur/homebrew-extensions>
 
 ## How do I install these formulae?
-`brew tap smillerdev/php-ext` then `brew install <formula>`
+`brew tap smillerdev/tap` then `brew install <formula>`
 
 ## Troubleshooting
 First, please run `brew update` and `brew doctor`.
@@ -17,4 +17,5 @@ Second, read the [Troubleshooting Checklist](https://docs.brew.sh/Troubleshootin
 Code is under the [BSD 2-clause "Simplified" License](https://github.com/Homebrew/homebrew-core/blob/master/LICENSE.txt).
 
 ## Credits
-Thanks @kabel, I happily copied this.
+- Thanks @kabel, I happily copied this.
+- Thanks Homebrew team for maintaining Homebrew
