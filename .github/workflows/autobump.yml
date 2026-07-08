@@ -42,8 +42,6 @@ jobs:
 
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@main
-        with:
-          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'github-actions' }}
 
       - name: Bump formulae
         env:
