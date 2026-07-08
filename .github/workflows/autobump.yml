@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 defaults:
   run:
@@ -42,13 +43,13 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@main
         with:
-          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'SMillerDev' }}
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'github-actions' }}
 
       - name: Bump formulae
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_AUTOBUMP_REPO_WORKFLOW_TOKEN }}
-          HOMEBREW_GIT_COMMITTER_NAME: SMillerDev
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_GIT_COMMITTER_NAME: github-actions
           HOMEBREW_GIT_COMMITTER_EMAIL: 1484494+SMillerDev@users.noreply.github.com
           FORMULAE: ${{ inputs.formulae }}
         run: |
