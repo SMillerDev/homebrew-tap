@@ -12,7 +12,7 @@ class ClaudeAgentAcp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "2620c2523a14b24610245c55c89ae02130e7a84f642be31806ae5f0f3c03706b"
   end
 
-  depends_on "node"
+  depends_on "homebrew/core/node"
 
   def install
     system "npm", "install", *std_npm_args
