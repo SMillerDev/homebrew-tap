@@ -34,7 +34,7 @@ jobs:
 
       - name: Configure Git user
         id: git
-        uses: Homebrew/actions/git-user-config@fd832223f9f99ebf0244dd20658680e5d4aca049 # 2026.08.03.2
+        uses: Homebrew/actions/git-user-config@b35a29a0f83ee8b8ca07b219fc8db3d7bb88ab49 # 2026.08.10.2
 
       - name: Bump formulae
         env:
