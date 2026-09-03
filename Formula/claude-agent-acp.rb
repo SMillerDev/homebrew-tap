@@ -21,6 +21,6 @@ class ClaudeAgentAcp < Formula
 
   test do
     output = pipe_output("#{bin}/claude-agent-acp 2>&1", "{}")
-    assert_match "Invalid message", output
+    assert_match "Invalid request", output
   end
 end
