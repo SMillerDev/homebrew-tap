@@ -32,18 +32,16 @@ class PhpUopzAT83 < Formula
     system "./configure", *configure_args
     system "make"
     (lib/module_path).install "modules/uopz.so"
+    (pkgetc/"ext-uopz.ini").write <<~EOS
+      [uopz]
+      extension="#{opt_lib/module_path}/uopz.so"
+    EOS
   end
 
-  def post_install
-    ext_config_path = etc/"php/#{Formula["php@8.3"].version.major_minor}/conf.d/ext-uopz.ini"
-    if ext_config_path.exist?
-      inreplace ext_config_path,
-        /extension=.*$/, "extension=\"#{opt_lib/module_path}/uopz.so\""
-    else
-      ext_config_path.write <<~EOS
-        [uopz]
-        extension="#{opt_lib/module_path}/uopz.so"
-      EOS
+  post_install_steps do
+    unless_path_exists "php/8.3/conf.d/ext-uopz.ini", base: :etc do
+      copy "ext-uopz.ini", "php/8.3/conf.d/ext-uopz.ini",
+           source_base: :pkgetc, target_base: :etc
     end
   end
 
