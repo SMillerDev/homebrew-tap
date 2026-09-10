@@ -11,6 +11,8 @@ class PhpSqllint < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "85812fa661667b6c5ebd2055b904ed20dcd7d5842faa6469fd72dba77bce06b7"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "php"
 
   def install
