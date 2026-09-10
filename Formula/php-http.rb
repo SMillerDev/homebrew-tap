@@ -13,6 +13,8 @@ class PhpHttp < Formula
     sha256 cellar: :any, x86_64_linux: "e029aba6dc5b51737683bbec1a4123a4e01aa480af60608094eb1169ae551f52"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "brotli"
