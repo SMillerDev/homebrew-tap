@@ -27,18 +27,16 @@ class PhpAutoloadPsr < Formula
     system "./configure", "--with-php-config=#{formula_opt_bin("php")/"php-config"}"
     system "make"
     (lib/module_path).install "modules/autoload_psr.so"
+    (pkgetc/"ext-autoload-psr.ini").write <<~EOS
+      [autoload_psr]
+      extension="#{opt_lib/module_path}/autoload_psr.so"
+    EOS
   end
 
-  def post_install
-    ext_config_path = etc/"php/#{Formula["php"].version.major_minor}/conf.d/ext-autoload_psr.ini"
-    if ext_config_path.exist?
-      inreplace ext_config_path,
-        /extension=.*$/, "extension=\"#{opt_lib/module_path}/autoload_psr.so\""
-    else
-      ext_config_path.write <<~EOS
-        [autoload_psr]
-        extension="#{opt_lib/module_path}/autoload_psr.so"
-      EOS
+  post_install_steps do
+    unless_path_exists "php/8.5/conf.d/ext-autoload-psr.ini", base: :etc do
+      copy "ext-autoload-psr.ini", "php/8.5/conf.d/ext-autoload-psr.ini",
+           source_base: :pkgetc, target_base: :etc
     end
   end
 
