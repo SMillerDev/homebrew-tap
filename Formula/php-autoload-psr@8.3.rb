@@ -13,6 +13,8 @@ class PhpAutoloadPsrAT83 < Formula
     sha256 cellar: :any,                 x86_64_linux: "ade461816d6a8d159d7d2305f82d9933758f414b7dc970de3d45fda91bb5dedf"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "php@8.3"
 
