@@ -13,6 +13,8 @@ class SaltPepper < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "77895e4a224deebb17b64888c04d8baaa31452691fbebbe911ffc22886cfd374"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "python@3.9"
 
   def install
