@@ -40,7 +40,7 @@ class PhpHttp < Formula
     cp_r "#{Formula["php-raphf"].include}/raphf", "ext/raphf"
 
     sdkpath = ""
-    sdkpath = MacOS.sdk_path_if_needed if OS.mac?
+    sdkpath = MacOS.sdk_path if OS.mac?
 
     configure_args = %W[
       --with-http
@@ -57,18 +57,16 @@ class PhpHttp < Formula
     system "./configure", *configure_args
     system "make"
     (lib/module_path).install "modules/http.so"
+    (pkgetc/"ext-http.ini").write <<~EOS
+      [pecl_http]
+      extension="#{opt_lib/module_path}/http.so"
+    EOS
   end
 
-  def post_install
-    ext_config_path = etc/"php/#{Formula["php"].version.major_minor}/conf.d/20-ext-http.ini"
-    if ext_config_path.exist?
-      inreplace ext_config_path,
-        /extension=.*$/, "extension=\"#{opt_lib/module_path}/http.so\""
-    else
-      ext_config_path.write <<~EOS
-        [pecl_http]
-        extension="#{opt_lib/module_path}/http.so"
-      EOS
+  post_install_steps do
+    unless_path_exists "php/8.5/conf.d/ext-http.ini", base: :etc do
+      copy "ext-http.ini", "php/8.5/conf.d/ext-http.ini",
+           source_base: :pkgetc, target_base: :etc
     end
   end
 
