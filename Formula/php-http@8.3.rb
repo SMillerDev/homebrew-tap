@@ -11,6 +11,7 @@ class PhpHttpAT83 < Formula
     sha256 cellar: :any, arm64_linux:  "f9c85f6f56ccb7989754c6ae3819b761d0719c8bdf18b3629fb1a84a00ca669f"
     sha256 cellar: :any, x86_64_linux: "6b70c6ba9d90e667f879c3008787b1b4b70c96738886bf6f8c1977004962a57e"
   end
+  disable! date: "2026-09-01", because: :unsupported
 
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
