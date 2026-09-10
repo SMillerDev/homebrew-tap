@@ -18,6 +18,8 @@ class PhpunitAT10 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "c565b49d5d4c44032d98021255a65ceae5a33e76ae4c7029fcde01015c71c73e"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "php" => :test
 
   def install
