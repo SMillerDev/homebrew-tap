@@ -13,6 +13,8 @@ class PhpRaphfAT83 < Formula
     sha256 cellar: :any,                 x86_64_linux: "ce7d8e3b7322eeb46471daedc4e2b863e3c629961813c3d0f83a36bcd1406b27"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@8.3"
