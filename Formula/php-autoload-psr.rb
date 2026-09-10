@@ -13,6 +13,8 @@ class PhpAutoloadPsr < Formula
     sha256 cellar: :any,                 x86_64_linux: "f141d1dfed35391bd6c67b7acc35eec5d05a615ed554ffb5e2f60289b7166537"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "php"
 
