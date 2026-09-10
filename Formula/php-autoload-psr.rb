@@ -7,10 +7,10 @@ class PhpAutoloadPsr < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-autoload-psr-0.2.1"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "54e8ed56b3981c11a20e9466c2ee2ddae624ce8e97a9ede98fe42bf5356cf36c"
-    sha256 cellar: :any,                 arm64_linux:  "0d50c1286a1778fc220227b20b0bdcc0c9690c626c9fe08c8e77d4e0ae9dbcd6"
-    sha256 cellar: :any,                 x86_64_linux: "c8bae4cf02fa59769dfe47bc99d76e5dfa5ca82a5c57045b48daf26430f6a228"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "0cc226ccc610d8a1a04498994e6e40e79963623847c3d115e908d1a9770386d5"
+    sha256 cellar: :any,                 arm64_linux:  "3f592273d7050a0c6b211a35897a80038796a5a01a85716398b0c63e50154bd1"
+    sha256 cellar: :any,                 x86_64_linux: "f141d1dfed35391bd6c67b7acc35eec5d05a615ed554ffb5e2f60289b7166537"
   end
 
   depends_on "autoconf" => :build
