@@ -13,6 +13,8 @@ class PhpRaphf < Formula
     sha256 cellar: :any,                 x86_64_linux: "504af0e30b1588a22765acd3b8bf62adaf91f8f5c18b18135cf07a6640cdfd7a"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php"
