@@ -13,6 +13,8 @@ class PhpUopzAT83 < Formula
     sha256 cellar: :any,                 x86_64_linux: "305709fa28288be221440bca6fff2115afd0116cbf02e9047759f46c1bba6d16"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "autoconf" => :build
   depends_on "pkg-config" => :build
   depends_on "php@8.3"
