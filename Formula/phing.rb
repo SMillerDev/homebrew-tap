@@ -13,6 +13,8 @@ class Phing < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "3775c56e574b45e58f82e6f4f06cfd5c51d8a5aa288025e915662abc09a29aec"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "php" => :test
 
   def install
