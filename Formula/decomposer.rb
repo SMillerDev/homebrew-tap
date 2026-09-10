@@ -11,6 +11,8 @@ class Decomposer < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "f3ccc4198912dc0e5f6d956180456b6963fd01151300c97b29d5d2e4a771079f"
   end
 
+  disable! date: "2026-09-01", because: :unsupported
+
   depends_on "scdoc" => :build
   depends_on "coreutils"
   uses_from_macos "jq", since: :sequoia
