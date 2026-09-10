@@ -7,9 +7,10 @@ class PhpHttp < Formula
 
   bottle do
     root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/php-http-4.3.1"
-    sha256 cellar: :any, arm64_tahoe:  "fb87e4eb4675550e840349c3bcf68aec5fcd3a20605edfcb58b1d243ab715dc6"
-    sha256 cellar: :any, arm64_linux:  "a74ab646a023143e8a87c0f7546b3e4596baccf628a0429ba779b8afca946822"
-    sha256 cellar: :any, x86_64_linux: "f740a0a874b7a140fb5401d4c57c62daac00d8842bf372bd1eb15273061b592e"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:  "70fa36634137f9c312404a442aade27f5390d21950e8c9e658d63ae911e4cc2a"
+    sha256 cellar: :any, arm64_linux:  "b25bba30cd7925c68d5cdcb5e54e653640cedfbe9ce9d91741897189d1a93553"
+    sha256 cellar: :any, x86_64_linux: "e029aba6dc5b51737683bbec1a4123a4e01aa480af60608094eb1169ae551f52"
   end
 
   depends_on "autoconf" => :build
