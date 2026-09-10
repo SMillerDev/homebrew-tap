@@ -35,18 +35,16 @@ class PhpRaphfAT83 < Formula
     mkdir_p include/"raphf"
     (include/"raphf").install %w[php_raphf.h src/php_raphf_api.h]
     (lib/module_path).install "modules/raphf.so"
+    (pkgetc/"ext-raphf.ini").write <<~EOS
+      [raphf]
+      extension="#{opt_lib/module_path}/raphf.so"
+    EOS
   end
 
-  def post_install
-    ext_config_path = etc/"php/#{Formula["php@8.3"].version.major_minor}/conf.d/10-ext-raphf.ini"
-    if ext_config_path.exist?
-      inreplace ext_config_path,
-        /extension=.*$/, "extension=\"#{opt_lib/module_path}/raphf.so\""
-    else
-      ext_config_path.write <<~EOS
-        [raphf]
-        extension="#{opt_lib/module_path}/raphf.so"
-      EOS
+  post_install_steps do
+    unless_path_exists "php/8.3/conf.d/ext-raphf.ini", base: :etc do
+      copy "ext-raphf.ini", "php/8.3/conf.d/ext-raphf.ini",
+           source_base: :pkgetc, target_base: :etc
     end
   end
 
