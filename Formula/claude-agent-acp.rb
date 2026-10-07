@@ -6,10 +6,10 @@ class ClaudeAgentAcp < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/claude-agent-acp-0.85.1"
-    sha256                               arm64_tahoe:  "7db81b5c36b5425add158c0c7850e3618cec17b1a967f573d8a61e2d35227771"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "0f9a9f0c616196900150add5ee310fe7882730533bf8c4b899a861f47417173b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9d144f3d0470c934dff6291dab7aa81607941e6f5802bb8b2b83cff16d9c8535"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/claude-agent-acp-0.86.0"
+    sha256                               arm64_tahoe:  "18fbace9cb506081c8edd8289e1558aad890839155856fff100dcf05e919329f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "3e7d6f425e3af73b83e196b8a145e999200d795b2decb64412f6b23b1a8fdbc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8fc5330f950f938129c6b1563bbb06b3824000d2fb540ee966705c8df842de22"
   end
 
   depends_on "homebrew/core/node"
