@@ -1,8 +1,8 @@
 class ClaudeAgentAcp < Formula
   desc "Use Claude Agent SDK from ACP-compatible clients"
   homepage "https://github.com/agentclientprotocol/claude-agent-acp"
-  url "https://registry.npmjs.org/@agentclientprotocol/claude-agent-acp/-/claude-agent-acp-0.94.0.tgz"
-  sha256 "a162298ffb17b2a3d4f0d07d035e272b9d8e0dda939aa47abbcca61c87ce26a9"
+  url "https://registry.npmjs.org/@agentclientprotocol/claude-agent-acp/-/claude-agent-acp-0.95.0.tgz"
+  sha256 "c682f95696c122c9fc009750c30620ff83cb99a29ec64d2531f204147e5b0d08"
   license "Apache-2.0"
 
   bottle do
