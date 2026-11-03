@@ -1,6 +1,6 @@
 class N8nWorkflowLinter < Formula
   include Language::Python::Virtualenv
-  
+
   desc "Static lint for n8n workflow JSON"
   homepage "https://payloadhq.github.io/"
   url "https://github.com/Payloadhq/n8n-workflow-linter/archive/refs/tags/v1.1.0.tar.gz"
