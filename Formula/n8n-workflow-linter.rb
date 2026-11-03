@@ -16,7 +16,7 @@ class N8nWorkflowLinter < Formula
 
   depends_on "homebrew/core/python@3.15"
 
-  deny_network_access!
+  allow_network_access! :build
 
   def install
     virtualenv_install_with_resources
