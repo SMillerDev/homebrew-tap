@@ -12,7 +12,7 @@ class N8nWorkflowLinter < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "ba6c37b58f07125091529517eb2e70ba873f29a8efe7f9f21832b3cd0fc5394b"
   end
 
-  depends_on "python@3.15"
+  depends_on "homebrew/core/python@3.15"
 
   deny_network_access!
 
