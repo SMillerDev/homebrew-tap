@@ -8,10 +8,10 @@ class N8nWorkflowLinter < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/n8n-workflow-linter-1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "4c850fbd8e4735958a5b8f3ca09b8e1359ebbcb1b2965dca19f5f7d9c9547b55"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "e65bfea30622dc41018b0e3546d2e8f76c321272476689ede1c59e5661161d91"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba6c37b58f07125091529517eb2e70ba873f29a8efe7f9f21832b3cd0fc5394b"
+    root_url "https://github.com/SMillerDev/homebrew-tap/releases/download/n8n-workflow-linter-1.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "04e73322524df5b84c4d6bacc50f35bed827bc0d40b4935a3f18ac5382369154"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "95f6ea034357a5cee2dc2ee0f36f0cdb6e13ee4dcb5b7aeb0250172804c2613b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "88755edea4647b73e37d1242c2a5158d534c2b6863310059be6d4488a433f7c4"
   end
 
   depends_on "homebrew/core/python@3.15"
