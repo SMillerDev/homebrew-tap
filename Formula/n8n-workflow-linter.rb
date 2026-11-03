@@ -1,8 +1,10 @@
 class N8nWorkflowLinter < Formula
+  include Language::Python::Virtualenv
+  
   desc "Static lint for n8n workflow JSON"
   homepage "https://payloadhq.github.io/"
-  url "https://github.com/Payloadhq/n8n-workflow-linter/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "c997e9d18e05abf7d0e70a91146075ad4ef32fae2169ee943d39d4f4ab542438"
+  url "https://github.com/Payloadhq/n8n-workflow-linter/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "b73e65fecf2eaf4bde3c218ade9357d3f56d55200ab5ddb7bc150266ac485ff9"
   license "MIT"
 
   bottle do
@@ -17,10 +19,7 @@ class N8nWorkflowLinter < Formula
   deny_network_access!
 
   def install
-    libexec.install "lint.py"
-    chmod "+x", libexec/"lint.py"
-    (bin/"n8n-workflow-linter").write_env_script libexec/"lint.py",
-        PATH: "#{formula_opt_bin("python@3.15")}/python3.15:${PATH}"
+    virtualenv_install_with_resources
   end
 
   test do
